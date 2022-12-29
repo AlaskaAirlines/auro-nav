@@ -27,7 +27,7 @@ const getSharedPlugins = (isLegacy) => [
 
 const modernConfig = {
   input: {
-    ['auro-breadcrumb__bundled']: './src/auro-breadcrumb.js',
+    ['auro-nav__bundled']: './src/auro-nav.js',
   },
   output: {
     format: 'esm',
@@ -53,13 +53,13 @@ const modernConfig = {
   ]
 };
 
-const auroBreadcrumbConfig = {
+const auronavConfig = {
   input: 'src/es5.js',
   output: {
     format: 'iife',
-    file: 'dist/auro-breadcrumb__bundled.es5.js'
+    file: 'dist/auro-nav__bundled.es5.js'
   },
   plugins: getSharedPlugins(true)
 };
 
-export default [modernConfig, auroBreadcrumbConfig];
+export default [modernConfig, auronavConfig];

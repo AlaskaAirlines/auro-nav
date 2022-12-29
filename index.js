@@ -1,1 +1,1 @@
-export * from './dist/auro-breadcrumb';
+export * from './dist/auro-nav';

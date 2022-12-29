@@ -10,35 +10,52 @@
 @import './../node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints';
 @import './../node_modules/@alaskaairux/webcorestylesheets/dist/core';
 
-// Support for auroElement styles
-// @import './node_modules/@alaskaairux/webcorestylesheets/dist/auroElement/auroElement';
+:host {
+  color: var(--auro-color-text-secondary-on-light);
 
-// container styles - defines the look of the outer custom component
-// :host {
-//   ...
-// }
+  ::slotted(auro-hyperlink) {
+    display: inline-flex;
+    flex-direction: row;
 
+    &:after {
+      display: inline-block;
+      width: 20px;
+      background-color: var(--auro-color-text-secondary-on-light);
+      content: '';
+      mask-image: url('https://unpkg.com/@alaskaairux/icons@latest/dist/icons/interface/chevron-right.svg');
+      mask-repeat: no-repeat;
+    }
+  }
 
-// Selector is for initial setup only
-// delete when building new custom element
-.testClass {
-  display: inline-block;
-  padding: var(--auro-text-body-size-default);
-  border: 1px solid var(--auro-color-border-error-on-light);
-  color:  var(--auro-color-border-error-on-light);
+  ::slotted(auro-hyperlink:last-of-type) {
+    &:after {
+      content: unset;
+    }
+  }
 }
 
-// Selector for native :focus-visible support
-:focus-visible {
-  background-color: var(--auro-color-border-error-on-light);
-  color: var(--auro-color-base-white);
-}
+@media (max-width: 768px) {
+  :host {
+    color: var(--auro-color-ui-default-on-light);
 
-// Selector for focus-visible polyfill
-:host(.focus-visible) {
-  // requires reference to custom element selector in this example
-  .testClass {
-    background-color: var(--auro-color-border-error-on-light);
-    color: var(--auro-color-base-white);
+    ::slotted(auro-hyperlink) {
+      &:before {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: var(--auro-color-ui-default-on-light);
+        content: '';
+        mask-image: url('https://unpkg.com/@alaskaairux/icons@latest/dist/icons/interface/chevron-left.svg');
+        mask-repeat: no-repeat;
+      }
+
+      &:after {
+        content: unset;
+      }
+    }
+
+    ::slotted(auro-hyperlink:not(:last-of-type)) {
+      display: none;
+    }
   }
 }

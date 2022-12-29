@@ -6,7 +6,7 @@ repository:
   description: Custom element that ....
 
   # A URL with more information about the repository
-  homepage: https://auro.alaskaair.com/components/auro/breadcrumb
+  homepage: https://auro.alaskaair.com/components/auro/nav
 
   # A comma-separated list of topics to set on the repository
   topics: auro, design-system, custom-element, generator-v3-17-2
@@ -69,7 +69,7 @@ branches:
 
 # Labels: define labels for Issues and Pull Requests
 labels:
-  - name: auro-breadcrumb
+  - name: auro-nav
     cat: default
     color: fa23e4
     description:

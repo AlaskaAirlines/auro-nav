@@ -16,16 +16,18 @@ import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
 import styleCssFixed from './style-fixed-css.js';
 
+// import '@aurodesignsystem/auro-hyperlink';
+
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * The auro-breadcrumb element provides users a way to ... (it would be great if you fill this out).
+ * The auro-nav element provides users a way to ... (it would be great if you fill this out).
  *
- * @attr {Boolean} fixed - Uses fixed pixel values for element shape
- * @attr {String} cssClass - Applies designated CSS class to demo element - you want to delete me!
+ * @attr {String} type - Populates the `type` attribute on the nav. Allowed values are `breadcrumb`.
+ * @slot Slot for insertion of auro-hyperlinks.
  */
 
 // build the component class
-class AuroBreadcrumb extends LitElement {
+class Auronav extends LitElement {
   // constructor() {
   //   super();
   // }
@@ -36,9 +38,6 @@ class AuroBreadcrumb extends LitElement {
   static get properties() {
     return {
       // ...super.properties,
-
-      // this property is DEMO ONLY! Please delete.
-      cssClass:   { type: String }
     };
   }
 
@@ -55,9 +54,7 @@ class AuroBreadcrumb extends LitElement {
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     return html`
-
-      <!-- this is demo code, DO NOT USE IN YOUR ELEMENT -->
-      <div class=${this.cssClass} tabindex="0">
+      <div>
         <slot></slot>
       </div>
     `;
@@ -65,6 +62,6 @@ class AuroBreadcrumb extends LitElement {
 }
 
 // define the name of the custom component
-if (!customElements.get("auro-breadcrumb")) {
-  customElements.define("auro-breadcrumb", AuroBreadcrumb);
+if (!customElements.get("auro-nav")) {
+  customElements.define("auro-nav", Auronav);
 }
