@@ -22,7 +22,7 @@ import styleCssFixed from './style-fixed-css.js';
 /**
  * The auro-nav element provides users a way to ... (it would be great if you fill this out).
  *
- * @attr {String} type - Populates the `type` attribute on the nav. Allowed values are `breadcrumb`.
+ * @attr {String} type - Populates the `type` attribute on the nav. Allowed values are [`breadcrumb`, `pipe`].
  * @slot Slot for insertion of auro-hyperlinks.
  */
 

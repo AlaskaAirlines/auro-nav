@@ -6,7 +6,7 @@ The auro-nav element provides users a way to ... (it would be great if you fill 
 
 | Attribute | Type     | Description                                      |
 |-----------|----------|--------------------------------------------------|
-| `type`    | `String` | Populates the `type` attribute on the nav. Allowed values are `breadcrumb`. |
+| `type`    | `String` | Populates the `type` attribute on the nav. Allowed values are [`breadcrumb`, `pipe`]. |
 
 ## Slots
 
