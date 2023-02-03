@@ -1,5 +1,5 @@
 const fs = require('fs');
-const bundle = 'auro-breadcrumb__bundled.js';
+const bundle = 'auro-nav__bundled.js';
 const indexFile = './build/index.html';
 
 // File destination.txt will be created or overwritten by default.
@@ -18,7 +18,7 @@ fs.readFile(indexFile, 'utf8', function (err,data) {
     return console.log(err);
   }
 
-  const element = data.replace(`../src/auro-breadcrumb.js`, `auro-breadcrumb__bundled.js`);
+  const element = data.replace(`../src/auro-nav.js`, `auro-nav__bundled.js`);
 
   fs.writeFile(indexFile, element, 'utf8', function (err) {
      if (err) return console.log(err);

@@ -14,10 +14,12 @@ test/
 demo/**/*.css
 demo/**/*.scss
 demo/**/*.html
+demo/**/*.md
 
 dist/es5.js
 
 index.html
 
 # ignore src
-src/**/*
+src/**/*.scss
+src/**/*.css

@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea for this project
 title: '[feature summary]'
-labels: 'auro-breadcrumb, Type: Feature, not-reviewed'
+labels: 'auro-nav, Type: Feature, not-reviewed'
 ---
 
 ## Is your feature request related to a problem? Please describe.
@@ -21,9 +21,9 @@ labels: 'auro-breadcrumb, Type: Feature, not-reviewed'
 
 <!-- Add any other context or screenshots about the feature request here. -->
 
-## Verify the version of @aurodesignsystem/auro-breadcrumb you have installed
+## Verify the version of @aurodesignsystem/auro-nav you have installed
 
 **The current version is:**
-[![See it on NPM!](https://img.shields.io/npm/v/@aurodesignsystem/auro-breadcrumb?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@aurodesignsystem/auro-breadcrumb)
+[![See it on NPM!](https://img.shields.io/npm/v/@aurodesignsystem/auro-nav?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@aurodesignsystem/auro-nav)
 
-My project has @aurodesignsystem/auro-breadcrumb v<!-- insert npm version number here --> installed
+My project has @aurodesignsystem/auro-nav v<!-- insert npm version number here --> installed
