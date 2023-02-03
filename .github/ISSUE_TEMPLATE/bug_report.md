@@ -2,19 +2,19 @@
 name: Bug report
 about: Create a report to help us improve
 title: '[issue summary] Please verify code version before submitting new issue'
-labels: 'auro-breadcrumb, Type: Bug, not-reviewed'
+labels: 'auro-nav, Type: Bug, not-reviewed'
 ---
 
 ## Describe the bug
 
 <!-- A clear and concise description of what the bug is. -->
 
-## Verify the version of @aurodesignsystem/auro-breadcrumb you have installed
+## Verify the version of @aurodesignsystem/auro-nav you have installed
 
 **The current version is:**
-[![See it on NPM!](https://img.shields.io/npm/v/@aurodesignsystem/auro-breadcrumb?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@aurodesignsystem/auro-breadcrumb)
+[![See it on NPM!](https://img.shields.io/npm/v/@aurodesignsystem/auro-nav?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@aurodesignsystem/auro-nav)
 
-My project has @aurodesignsystem/auro-breadcrumb v<!-- insert npm version number here --> installed
+My project has @aurodesignsystem/auro-nav v<!-- insert npm version number here --> installed
 
 ## To Reproduce
 
