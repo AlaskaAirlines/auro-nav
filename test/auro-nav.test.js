@@ -10,13 +10,13 @@ describe('auro-nav', () => {
     await expect(el).to.be.accessible();
   });
 
-  it('auro-nav custom element is defined', async () => {
+  it('auro-nav custom element is defined using breadcrumb links', async () => {
     const el = await !!customElements.get("auro-nav");
 
     await expect(el).to.be.true;
   });
 
-  it('icons are present on component', async () => {
+  it('breadcrumb icons are present on component', async () => {
     const el = await defaultBreadcrumbFixture();
 
     el.manageIcons();
