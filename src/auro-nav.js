@@ -106,9 +106,6 @@ export class AuroNav extends LitElement {
     link.insertAdjacentElement('afterbegin', icon);
   }
 
-  // When using auroElement, use the following attribute and function when hiding content from screen readers.
-  // aria-hidden="${this.hideAudible(this.hiddenAudible)}"
-
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     return html`

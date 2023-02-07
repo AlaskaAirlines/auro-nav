@@ -17,14 +17,14 @@ $ git remote -v
 This should return
 
 ```bash
-origin  https://github.com/[yourUserName]/auro-breadcrumb.git (fetch)
-origin  https://github.com/[yourUserName]/auro-breadcrumb.git (push)
+origin  https://github.com/[yourUserName]/auro-nav.git (fetch)
+origin  https://github.com/[yourUserName]/auro-nav.git (push)
 ```
 
 To add the upstream repo to your local forked project
 
 ```bash
-$ git remote add upstream https://github.com/AlaskaAirlines/auro-breadcrumb.git
+$ git remote add upstream https://github.com/AlaskaAirlines/auro-nav.git
 ```
 
 To validate this worked, run the following again
@@ -34,10 +34,10 @@ $ git remote -v
 ```
 
 ```
-origin  https://github.com/[yourUserName]/auro-breadcrumb.git (fetch)
-origin  https://github.com/[yourUserName]/auro-breadcrumb.git (push)
-upstream        https://github.com/AlaskaAirlines/auro-breadcrumb.git (fetch)
-upstream        https://github.com/AlaskaAirlines/auro-breadcrumb.git (push)
+origin  https://github.com/[yourUserName]/auro-nav.git (fetch)
+origin  https://github.com/[yourUserName]/auro-nav.git (push)
+upstream        https://github.com/AlaskaAirlines/auro-nav.git (fetch)
+upstream        https://github.com/AlaskaAirlines/auro-nav.git (push)
 ```
 
 #### Sync upstream
