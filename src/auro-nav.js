@@ -17,37 +17,16 @@ import { LitElement, html } from "lit";
 import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
 import styleCssFixed from './style-fixed-css.js';
-import styleBreadcrumbCss from "./style-breadcrumb-css.js";
-import styleCssAuroHyperlink from "@aurodesignsystem/auro-hyperlink/src/style-css";
-
-import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.js";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
  * The auro-nav element provides users a way to ... (it would be great if you fill this out).
  *
- * @attr {Boolean} homeIcon - Adds a 'home' auro-icon within the first auro-hyperlink when the attribute is present.
  * @slot Slot for insertion of auro-hyperlinks.
  */
 
 // build the component class
 export class AuroNav extends LitElement {
-  constructor() {
-    super();
-
-    /* eslint-disable no-unused-expressions */
-    customElements.get('auro-nav-breadcrumb') || customElements.define('auro-nav-breadcrumb', class extends AuroHyperlink {
-      static get styles() {
-        return [
-          styleCssAuroHyperlink,
-          styleBreadcrumbCss,
-          styleCssFixed
-        ];
-      }
-    });
-    /* eslint-enable no-unused-expressions */
-  }
-
   // This function is to define props used within the scope of this component
   // Be sure to review  https://lit-element.polymer-project.org/guide/properties#reflected-attributes
   // to understand how to use reflected attributes with your property settings.
@@ -69,7 +48,7 @@ export class AuroNav extends LitElement {
    * @returns {void} Inserts home and chevron-left icons for every breadcrumb.
    */
   manageIcons() {
-    const breadcrumbs = [...this.querySelectorAll('auro-nav-breadcrumb')];
+    const breadcrumbs = [...this.querySelectorAll('auro-breadcrumb')];
 
     if (breadcrumbs.length > 0) {
       breadcrumbs.forEach((breadcrumb) => {

@@ -34,11 +34,11 @@ describe('auro-nav', () => {
 async function defaultBreadcrumbFixture() {
   return await fixture(html`
     <auro-nav>
-      <auro-nav-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Home</auro-nav-breadcrumb>
-      <auro-nav-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 2</auro-nav-breadcrumb>
-      <auro-nav-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 3</auro-nav-breadcrumb>
-      <auro-nav-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 4</auro-nav-breadcrumb>
-      <auro-nav-breadcrumb>Current</auro-nav-breadcrumb>
+      <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Home</auro-breadcrumb>
+      <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 2</auro-breadcrumb>
+      <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 3</auro-breadcrumb>
+      <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 4</auro-breadcrumb>
+      <auro-breadcrumb>Current</auro-nav-breadcrumb>
     </auro-nav>
   `);
 }

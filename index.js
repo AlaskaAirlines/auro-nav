@@ -1,3 +1,4 @@
+import { AuroBreadcrumb } from './src/auro-breadcrumb.js';
 import { AuroNav } from './src/auro-nav.js';
 
 /**
@@ -5,11 +6,12 @@ import { AuroNav } from './src/auro-nav.js';
  * @param {Object} name - Name to use for custom element.
  * @returns {void}
  */
-export function registerComponent(name = 'custom-nav') {
+export function registerComponent(name, className) {
   // alias definition
   if (!customElements.get(name)) {
-    customElements.define(name, class extends AuroNav {});
+    customElements.define(name, class extends className {});
   }
 }
 
-registerComponent('auro-nav');
+registerComponent('auro-breadcrumb', AuroBreadcrumb);
+registerComponent('auro-nav', AuroNav);
