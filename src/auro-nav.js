@@ -52,8 +52,8 @@ export class AuroNav extends LitElement {
 
     if (breadcrumbs.length > 0) {
       breadcrumbs.forEach((breadcrumb) => {
-        this.insertIcon(breadcrumb, 'interface', 'home-stroke', '16px');
-        this.insertIcon(breadcrumb, 'interface', 'chevron-left', '24px');
+        this.insertIcon(breadcrumb, 'interface', 'home-stroke', 'var(--auro-size-200)');
+        this.insertIcon(breadcrumb, 'interface', 'chevron-left', 'var(--auro-size-300)');
       });
     }
   }
@@ -77,10 +77,10 @@ export class AuroNav extends LitElement {
 
     icon.style.width = size;
     icon.style.height = size;
-    icon.style.lineHeight = '24px';
+    icon.style.lineHeight = 'var(--auro-size-300)';
     icon.style.position = 'relative';
     icon.style.top = '-2px';
-    icon.style.marginRight = '4px';
+    icon.style.marginRight = 'var(--auro-size-50)';
 
     link.insertAdjacentElement('afterbegin', icon);
   }
