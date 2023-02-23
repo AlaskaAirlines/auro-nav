@@ -59,11 +59,13 @@ import "@aurodesignsystem/auro-nav";
 **Reference component in HTML**
 
 ```html
-<div class="exampleWrapper">
-</div>
-<auro-accordion lowProfile justifyRight>
-  <span slot="trigger">See code</span>
-</auro-accordion>
+<auro-nav>
+  <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Home</auro-breadcrumb>
+  <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 2</auro-breadcrumb>
+  <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 3</auro-breadcrumb>
+  <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 4</auro-breadcrumb>
+  <auro-breadcrumb>Current</auro-breadcrumb>
+</auro-nav>
 ```
 
 ## Install bundled assets from CDN
@@ -92,11 +94,13 @@ The `<auro-nav>` element should only be used for multi-page projects that have 3
 ### Default auro-nav
 
 ```html
-<div class="exampleWrapper">
-</div>
-<auro-accordion lowProfile justifyRight>
-  <span slot="trigger">See code</span>
-</auro-accordion>
+<auro-nav>
+  <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Home</auro-breadcrumb>
+  <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 2</auro-breadcrumb>
+  <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 3</auro-breadcrumb>
+  <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 4</auro-breadcrumb>
+  <auro-breadcrumb>Current</auro-breadcrumb>
+</auro-nav>
 ```
 
 ## Development
