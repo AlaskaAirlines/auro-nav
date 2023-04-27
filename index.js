@@ -1,4 +1,5 @@
 import { AuroBreadcrumb } from './src/auro-breadcrumb.js';
+import { AuroAnchorlink } from './src/auro-anchorlink.js';
 import { AuroNav } from './src/auro-nav.js';
 
 /**
@@ -15,4 +16,5 @@ export function registerComponent(name, className) {
 }
 
 registerComponent('auro-breadcrumb', AuroBreadcrumb);
+registerComponent('auro-anchorlink', AuroAnchorlink);
 registerComponent('auro-nav', AuroNav);

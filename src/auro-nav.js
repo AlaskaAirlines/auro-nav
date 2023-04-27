@@ -22,6 +22,7 @@ import styleCssFixed from './style-fixed-css.js';
 /**
  * The auro-nav element provides users a way to ... (it would be great if you fill this out).
  *
+ * @attr {Boolean} anchornav - If set, auro-hyperlinks will stack vertically.
  * @slot Slot for insertion of auro-hyperlinks.
  */
 
@@ -47,7 +48,16 @@ export class AuroNav extends LitElement {
    * @private
    * @returns {void} Inserts home and chevron-left icons for every breadcrumb.
    */
-  manageIcons() {
+  handleSlotItems() {
+    this.manageBreadcrumbs();
+    this.manageAnchorlinks();
+  }
+
+  /**
+   * @private
+   * @returns {void} Inserts home and chevron-left icons for every breadcrumb.
+   */
+  manageBreadcrumbs() {
     const breadcrumbs = [...this.querySelectorAll('auro-breadcrumb')];
 
     if (breadcrumbs.length > 0) {
@@ -55,6 +65,60 @@ export class AuroNav extends LitElement {
         this.insertIcon(breadcrumb, 'interface', 'home-stroke', 'var(--auro-size-200)');
         this.insertIcon(breadcrumb, 'interface', 'chevron-left', 'var(--auro-size-300)');
       });
+    }
+  }
+
+  /**
+   * @private
+   * @returns {void}
+   */
+  manageAnchorlinks() {
+    this.anchorlinks = [...this.querySelectorAll('auro-anchorlink')];
+
+    if (this.anchorlinks.length > 0) {
+      this.setAttribute('anchornav', true);
+      this.requestUpdate();
+
+      this.anchorlinks.forEach((link) => {
+
+        link.addEventListener('click', (evt) => {
+          // Prevents from href from being followed (this is used for testing)
+          evt.preventDefault();
+
+          // Removes class from all other anchorlinks before reapplying to the one that was clicked
+          this.anchorlinks.forEach((anchorlink) => anchorlink.classList.remove('optionSelected'));
+          link.classList.add('optionSelected');
+        });
+      });
+
+      this.handleMobileAnchornav();
+    }
+  }
+
+  /**
+   * @private
+   * @returns {void}
+   */
+  handleMobileAnchornav() {
+    const button = this.shadowRoot.querySelector('auro-button');
+
+    if (this.anchorlinks.length > 3) { // eslint-disable-line
+      button.addEventListener('click', () => {
+        if (!this.hasAttribute('aria-expanded')) {
+          this.setAttribute('aria-expanded', true);
+          button.innerHTML = 'View Less';
+
+          this.anchorlinks.forEach((link) => link.setAttribute('aria-expanded', true));
+        } else {
+          this.removeAttribute('aria-expanded');
+          button.innerHTML = 'View More';
+
+          this.anchorlinks.forEach((link) => link.removeAttribute('aria-expanded'));
+        }
+      });
+    } else {
+      button.style.display = 'none';
+      this.style.background = 'unset';
     }
   }
 
@@ -89,8 +153,12 @@ export class AuroNav extends LitElement {
   render() {
     return html`
       <div aria-label="navigation" role="navigation">
-        <slot @slotchange="${this.manageIcons}"></slot>
+        <div class="label-container">
+          <slot name="label"></slot>
+        </div>
+        <slot @slotchange="${this.handleSlotItems}"></slot>
       </div>
+      <auro-button slim tertiary id="showHideBtn">View More</auro-button>
     `;
   }
 }
