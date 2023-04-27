@@ -9,3 +9,41 @@
 
 @import './../node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints';
 @import './../node_modules/@alaskaairux/webcorestylesheets/dist/core';
+
+/* stylelint-disable selector-class-pattern, color-function-notation, number-leading-zero, number-max-precision, color-hex-case, color-hex-length, max-line-length */
+
+:host(:not([anchornav])) {
+  #showHideBtn {
+    display: none;
+  }
+}
+
+:host([anchornav]) {
+  display: flex;
+  flex-direction: column;
+
+  auro-button {
+    display: none;
+  }
+
+  .label-container {
+    padding-bottom: var(--auro-size-200);
+  }
+
+  ::slotted(span) {
+    color: var(--auro-color-text-secondary-on-light);
+  }
+
+  @include auro_breakpoint($max: $auro-breakpoint-sm) {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.0001) 0%, rgba(255, 255, 255, 0.00874633) 6.67%, rgba(255, 255, 255, 0.0356065) 13.33%, rgba(255, 255, 255, 0.0817517) 20%, rgba(255, 255, 255, 0.147497) 26.67%, rgba(255, 255, 255, 0.231852) 33.33%, rgba(255, 255, 255, 0.331951) 40%, rgba(255, 255, 255, 0.442747) 46.67%, rgba(255, 255, 255, 0.557353) 53.33%, rgba(255, 255, 255, 0.668149) 60%, rgba(255, 255, 255, 0.768248) 66.67%, rgba(255, 255, 255, 0.852603) 73.33%, rgba(255, 255, 255, 0.918348) 80%, rgba(255, 255, 255, 0.964494) 86.67%, rgba(255, 255, 255, 0.991354) 93.33%, #FFFFFF 100%);
+
+    auro-button {
+      display: inline-flex;
+      padding-top: var(--auro-size-150);
+    }
+  }
+}
+
+:host([aria-expanded]) {
+  background: unset;
+}

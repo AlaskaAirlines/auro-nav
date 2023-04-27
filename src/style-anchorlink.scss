@@ -1,0 +1,83 @@
+// Copyright (c) 2022 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
+// See LICENSE in the project root for license information.
+
+// ---------------------------------------------------------------------
+
+// Import Auro tokens
+@import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
+@import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties';
+
+@import './../node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints';
+@import './../node_modules/@alaskaairux/webcorestylesheets/dist/core';
+
+/* stylelint-disable declaration-empty-line-before, declaration-no-important, order/properties-order */
+
+:host {
+  display: block;
+  padding: var(--auro-size-100) 0 var(--auro-size-100) var(--auro-size-200);
+
+  border: 1px solid transparent;
+  border-left: 1px solid var(--auro-color-border-divider-on-light);
+
+  a {
+    color: var(--auro-color-text-secondary-on-light) !important;
+    text-decoration: none;
+
+    font-size: var(--auro-text-body-size-sm);
+
+    width: 100%;
+
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+
+    &:hover {
+      color: var(--auro-color-text-primary-on-light) !important;
+    }
+
+    &:focus {
+      background-color: unset;
+      outline: unset;
+    }
+  }
+
+  @include auro_breakpoint($max: $auro-breakpoint-sm) {
+    display: none;
+  }
+}
+
+:host(:nth-of-type(1)),
+:host(:nth-of-type(2)),
+:host(:nth-of-type(3)) {
+  @include auro_breakpoint($max: $auro-breakpoint-sm) {
+    display: block;
+  }
+}
+
+:host([aria-expanded]) {
+  @include auro_breakpoint($max: $auro-breakpoint-sm) {
+    display: block !important;
+  }
+}
+
+:host(.optionSelected) {
+  box-shadow: 1px 0 0 0 var(--auro-color-border-focus-on-light) inset;
+  border-left: 1px var(--auro-color-border-focus-on-light) solid;
+
+  a {
+    color: var(--auro-color-text-primary-on-light) !important;
+  }
+}
+
+:host(:focus) {
+  border: 1px solid var(--auro-color-border-active-on-light);
+  border-left: 1px var(--auro-color-border-focus-on-light) solid;
+  border-radius: 5px;
+}
+
+:host(:focus:hover) {
+  a {
+    color: var(--auro-color-text-primary-on-light) !important;
+  }
+}

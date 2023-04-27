@@ -11,7 +11,7 @@ The `<auro-nav>` element should only be used for multi-page projects that have 3
 
 ### Default Example
 
-Example using `auro-nav-breadcrumb` for each link. This example renders as a horizontal list of links. The first icon in the list
+Example using `auro-breadcrumb` for each link. This example renders as a horizontal list of links. The first icon in the list
 will display a home icon, all links will have a right chevron as a divider, and the last link will be disabled.
 
 <div class="exampleWrapper">
@@ -33,6 +33,34 @@ will display a home icon, all links will have a right chevron as a divider, and 
   <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 3</auro-breadcrumb>
   <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 4</auro-breadcrumb>
   <auro-breadcrumb>Current</auro-breadcrumb>
+</auro-nav>
+```
+
+</auro-accordion>
+
+### Anchornav
+
+<div class="exampleWrapper">
+  <auro-nav>
+    <span slot="label">Anchor Navigation</span>
+    <auro-anchorlink href="#" class="optionSelected">Home</auro-anchorlink>
+    <auro-anchorlink href="#">Level 2</auro-anchorlink>
+    <auro-anchorlink href="#">Level 3</auro-anchorlink>
+    <auro-anchorlink href="#">Default state but with really long text like this to test if the text ellipses</auro-anchorlink>
+    <auro-anchorlink href="#">Current</auro-anchorlink>
+  </auro-nav>
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+
+```html
+<auro-nav>
+  <span slot="label">Anchor Navigation</span>
+  <auro-anchorlink href="#" class="optionSelected">Home</auro-anchorlink>
+  <auro-anchorlink href="#">Level 2</auro-anchorlink>
+  <auro-anchorlink href="#">Level 3</auro-anchorlink>
+  <auro-anchorlink href="#">Default state but with really long text like this to test if the text ellipses</auro-anchorlink>
+  <auro-anchorlink href="#">Current</auro-anchorlink>
 </auro-nav>
 ```
 
