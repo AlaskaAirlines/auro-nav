@@ -7,6 +7,7 @@
 
 // If using litElement base class
 import { LitElement, html } from "lit";
+import {classMap} from 'lit/directives/class-map.js';
 
 // If using auroElement base class
 // See instructions for importing auroElement base class https://git.io/JULq4
@@ -14,7 +15,6 @@ import { LitElement, html } from "lit";
 // import AuroElement from '@alaskaairux/webcorestylesheets/dist/auroElement/auroElement';
 
 // Import touch detection lib
-import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
 import styleCssFixed from './style-fixed-css.js';
 
@@ -22,18 +22,44 @@ import styleCssFixed from './style-fixed-css.js';
 /**
  * The auro-nav element provides users a way to ... (it would be great if you fill this out).
  *
- * @attr {Boolean} anchornav - If set, auro-hyperlinks will stack vertically.
- * @slot Slot for insertion of auro-hyperlinks.
+ * @attr {Boolean} activeLink - If set, defines the currently active link.
+ * @attr {String} anchorNavContent - Defines the container that anchor links navigate within.
+ * @slot Slot for insertion of navigation links.
+ * @slot mobileToggleExpanded - Slot for button text in mobile when content is expanded.
+ * @slot mobileToggleCollapsed - Slot for button text in mobile when content is collapsed.
  */
 
 // build the component class
 export class AuroNav extends LitElement {
+  constructor() {
+    super();
+
+    this.anchorNavContent = undefined;
+
+    /**
+     * @private
+     */
+    this.activeLink = undefined;
+
+    /**
+     * @private
+     */
+    this.labelHidden = true;
+
+    /**
+     * @private
+     */
+    this.mobileViewCollapsedNumLinks = 3;
+  }
+
   // This function is to define props used within the scope of this component
   // Be sure to review  https://lit-element.polymer-project.org/guide/properties#reflected-attributes
   // to understand how to use reflected attributes with your property settings.
   static get properties() {
     return {
       // ...super.properties,
+      activeLink: { type: Object },
+      anchorNavContent: { type: String }
     };
   }
 
@@ -42,6 +68,16 @@ export class AuroNav extends LitElement {
       styleCss,
       styleCssFixed
     ];
+  }
+
+  handleLabelSlot() {
+    const slot = this.shadowRoot.querySelector('#label');
+
+    this.labelHidden = true;
+
+    if (slot.assignedNodes().length > 0) {
+      this.labelHidden = false;
+    }
   }
 
   /**
@@ -80,18 +116,28 @@ export class AuroNav extends LitElement {
       this.requestUpdate();
 
       this.anchorlinks.forEach((link) => {
+        if (link.active) {
+          this.activeLink = link;
+        }
+
+        link.addEventListener('auroAnchorLink-activated', (evt) => {
+          if (this.activeLink !== evt.target) {
+            this.activeLink = evt.target;
+          }
+        });
 
         link.addEventListener('click', (evt) => {
-          // Prevents from href from being followed (this is used for testing)
-          evt.preventDefault();
+          if (this.scrollContainer && this.activeLink) {
+            const targetContent = document.querySelector(evt.target.href);
 
-          // Removes class from all other anchorlinks before reapplying to the one that was clicked
-          this.anchorlinks.forEach((anchorlink) => anchorlink.classList.remove('optionSelected'));
-          link.classList.add('optionSelected');
+            if (targetContent) {
+              targetContent.scrollIntoView(targetContent);
+            }
+          }
         });
       });
 
-      this.handleMobileAnchornav();
+      this.assessActiveAnchorLink();
     }
   }
 
@@ -99,26 +145,33 @@ export class AuroNav extends LitElement {
    * @private
    * @returns {void}
    */
-  handleMobileAnchornav() {
-    const button = this.shadowRoot.querySelector('auro-button');
-
-    if (this.anchorlinks.length > 3) { // eslint-disable-line
-      button.addEventListener('click', () => {
-        if (!this.hasAttribute('aria-expanded')) {
-          this.setAttribute('aria-expanded', true);
-          button.innerHTML = 'View Less';
-
-          this.anchorlinks.forEach((link) => link.setAttribute('aria-expanded', true));
-        } else {
-          this.removeAttribute('aria-expanded');
-          button.innerHTML = 'View More';
-
-          this.anchorlinks.forEach((link) => link.removeAttribute('aria-expanded'));
-        }
-      });
+  toggleAnchorLinks() {
+    if (!this.hasAttribute('aria-expanded')) {
+      this.setAttribute('aria-expanded', true);
     } else {
-      button.style.display = 'none';
-      this.style.background = 'unset';
+      this.removeAttribute('aria-expanded');
+    }
+
+    this.handleAnchorNavAnimation();
+  }
+
+  /**
+   * @private
+   * @returns {void}
+   */
+  handleAnchorNavAnimation() {
+    const marker = this.shadowRoot.querySelector('#anchorMarker');
+
+    if (marker) {
+      if (this.activeLink) {
+        marker.style.display = 'block';
+        marker.style.height = `${this.activeLink.offsetHeight}px`;
+        marker.style.top = `${this.activeLink.offsetTop}px`;
+      } else {
+        marker.style.display = 'none';
+        marker.style.height = 'unset';
+        marker.style.top = 'unset';
+      }
     }
   }
 
@@ -149,16 +202,92 @@ export class AuroNav extends LitElement {
     link.insertAdjacentElement('afterbegin', icon);
   }
 
+  assessActiveAnchorLink() {
+    let lastInView; /* eslint-disable-line init-declarations */
+
+    this.anchorlinks.forEach((anchorLink) => {
+      const target = this.scrollContainer.querySelector(anchorLink.getAttribute('href'));
+
+      if (target) {
+        if (this.isScrolledIntoView(target)) {
+          lastInView = anchorLink;
+        }
+      }
+    });
+
+    if (this.activeLink !== lastInView) {
+      this.activeLink = lastInView;
+    }
+  }
+
+  isScrolledIntoView(elem) {
+    const containerViewBottom = this.scrollContainer.scrollTop + this.scrollContainer.offsetHeight;
+    const elementInViewPos = elem.offsetTop + elem.offsetHeight;
+    const inView = containerViewBottom >= elementInViewPos;
+
+    return inView;
+  }
+
+  updated(changedProperties) {
+    if (changedProperties.has('activeLink')) {
+      if (this.hasAttribute('anchornav')) {
+        this.anchorlinks.forEach((anchorlink) => {
+          if (this.activeLink !== anchorlink) {
+            anchorlink.removeAttribute('active');
+          }
+        });
+
+        this.handleAnchorNavAnimation();
+      }
+    }
+  }
+
+  firstUpdated() {
+    this.scrollContainer = document.querySelector(this.anchorNavContent);
+
+    if (this.scrollContainer) {
+      this.scrollContainer.addEventListener('scroll', () => {
+        this.assessActiveAnchorLink();
+      });
+    }
+
+    window.addEventListener('resize', () => {
+      const marker = this.shadowRoot.querySelector('#anchorMarker');
+      if (marker) {
+        marker.setAttribute('resizing', true);
+        this.handleAnchorNavAnimation();
+        marker.removeAttribute('resizing');
+      }
+    });
+  }
+
   // function that renders the HTML and CSS into  the scope of the component
   render() {
+
+    const labelClasses = {
+      'hidden': this.labelHidden,
+      'label-container': true
+    };
     return html`
       <div aria-label="navigation" role="navigation">
-        <div class="label-container">
-          <slot name="label"></slot>
+        <div class=${classMap(labelClasses)}>
+          <slot id="label" name="label" @slotchange="${this.handleLabelSlot}"></slot>
         </div>
         <slot @slotchange="${this.handleSlotItems}"></slot>
       </div>
-      <auro-button slim tertiary id="showHideBtn">View More</auro-button>
+      ${this.anchorlinks && this.anchorlinks.length > this.mobileViewCollapsedNumLinks ? html`
+        <auro-button slim tertiary class="showHideBtn" @click=${this.toggleAnchorLinks}>
+          <span more>
+            <slot name="mobileToggleExpanded"></slot>
+          </span>
+          <span less>
+            <slot name="mobileToggleCollapsed"></slot>
+          </span>
+        </auro-button>
+      ` : undefined}
+      ${this.anchorlinks ? html`
+        <div id="anchorMarker" class="anchorMarker"></div>
+      ` : undefined}
     `;
   }
 }
