@@ -28,8 +28,7 @@
     "@alaskaairux/design-tokens": "^3.12.1",
     "@alaskaairux/icons": "^4.19.0",
     "@alaskaairux/webcorestylesheets": "^3.7.3",
-    "@webcomponents/webcomponentsjs": "^2.7.0",
-    "focus-visible": "^5.2.0"
+    "@webcomponents/webcomponentsjs": "^2.7.0"
   },
   "devDependencies": {
     "@alaskaairux/design-tokens": "^3.12.1",
@@ -53,7 +52,6 @@
     "core-js": "^3.26.1",
     "eslint": "^8.30.0",
     "eslint-plugin-jsdoc": "^39.8.0",
-    "focus-visible": "^5.2.0",
     "husky": "^8.0.0",
     "lodash": "^4.17.21",
     "markdown-magic": "^2.6.1",

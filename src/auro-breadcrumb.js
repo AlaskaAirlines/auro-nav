@@ -4,7 +4,6 @@
 // ---------------------------------------------------------------------
 
 // Import touch detection lib
-import "focus-visible/dist/focus-visible.min.js";
 import styleBreadcrumbCss from "./style-breadcrumb-css.js";
 import styleCssAuroHyperlink from "@aurodesignsystem/auro-hyperlink/src/style-css";
 
