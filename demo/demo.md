@@ -41,6 +41,31 @@ will display a home icon, all links will have a right chevron as a divider, and 
 ### Anchornav
 
 <div class="exampleWrapper">
+  <style>
+    .anchorNavWithContentContainer {
+      display: flex;
+      flex-direction: row;
+
+    }
+
+    .contentWrapper,
+    auro-nav {
+      flex: 1;
+    }
+
+    .anchorNavContentContainer {
+      max-height: 200px;
+      overflow-y: auto;
+      background: white;
+      border: solid 1px;
+      position: relative;
+      padding: 10px;
+    }
+
+    .contentWrapper {
+      margin-right: 100px;
+    }
+  </style>
   <div class="anchorNavWithContentContainer">
     <div class="contentWrapper">
       This is example content. Scrolling the content inside this box will automatically make selections in the menu on the right.
@@ -76,6 +101,31 @@ will display a home icon, all links will have a right chevron as a divider, and 
   <span slot="trigger">See code</span>
 
 ```html
+<style>
+  .anchorNavWithContentContainer {
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .contentWrapper,
+  auro-nav {
+    flex: 1;
+  }
+
+  .anchorNavContentContainer {
+    max-height: 200px;
+    overflow-y: auto;
+    background: white;
+    border: solid 1px;
+    position: relative;
+    padding: 10px;
+  }
+
+  .contentWrapper {
+    margin-right: 100px;
+  }
+</style>
 <div class="anchorNavWithContentContainer">
   <div class="contentWrapper">
     This is example content. Scrolling the content inside this box will automatically make selections in the menu on the right.

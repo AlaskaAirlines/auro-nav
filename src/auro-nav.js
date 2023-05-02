@@ -3,7 +3,7 @@
 
 // ---------------------------------------------------------------------
 
-/* eslint-disable max-classes-per-file, array-bracket-newline, max-params */
+/* eslint-disable max-classes-per-file, array-bracket-newline, max-params, max-lines */
 
 // If using litElement base class
 import { LitElement, html } from "lit";
@@ -70,6 +70,10 @@ export class AuroNav extends LitElement {
     ];
   }
 
+  /**
+   * @private
+   * @returns {void} Sets the labelHidden attribute to true if there is no label slot content.
+   */
   handleLabelSlot() {
     const slot = this.shadowRoot.querySelector('#label');
 
@@ -105,6 +109,7 @@ export class AuroNav extends LitElement {
   }
 
   /**
+   * Used for the anchorLink version to bind events to all link elements in the slotted content.
    * @private
    * @returns {void}
    */
@@ -142,6 +147,7 @@ export class AuroNav extends LitElement {
   }
 
   /**
+   * Used to toggle visibility of all links after the first 3 when viewed in the mobile layout.
    * @private
    * @returns {void}
    */
@@ -156,6 +162,7 @@ export class AuroNav extends LitElement {
   }
 
   /**
+   * Used for the anchorLink version to animate the position and size of the marker used to identify the active link.
    * @private
    * @returns {void}
    */
@@ -202,6 +209,11 @@ export class AuroNav extends LitElement {
     link.insertAdjacentElement('afterbegin', icon);
   }
 
+  /**
+   * Sets the activeLink attribute based on which linked content section is in view.
+   * @private
+   * @returns {void}
+   */
   assessActiveAnchorLink() {
     let lastInView; /* eslint-disable-line init-declarations */
 
@@ -220,6 +232,12 @@ export class AuroNav extends LitElement {
     }
   }
 
+  /**
+   * Used with the anchorLink version to determine if the designated content is currently viewable in the scrollbox.
+   * @private
+   * @param {Object} elem - The element to check if it is currently visible in the scrollContainer.
+   * @returns {Boolean} If true, the element passed in is visible.
+   */
   isScrolledIntoView(elem) {
     const containerViewBottom = this.scrollContainer.scrollTop + this.scrollContainer.offsetHeight;
     const elementInViewPos = elem.offsetTop + elem.offsetHeight;
