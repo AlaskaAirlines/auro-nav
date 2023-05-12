@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+# [1.1.0](https://github.com/AlaskaAirlines/auro-nav/compare/v1.0.1...v1.1.0) (2023-05-12)
+
+
+### Features
+
+* **anchornav:** implement anchornav variation [#10](https://github.com/AlaskaAirlines/auro-nav/issues/10) ([0c192bd](https://github.com/AlaskaAirlines/auro-nav/commit/0c192bd39a98766b0405e47ba99d5902e5cc1202))
+* **animation:** add animation effect and code cleanup ([0d2075c](https://github.com/AlaskaAirlines/auro-nav/commit/0d2075c230badef3e5a1fe9dcbcc4dd2a07e8cda))
+
 ## [1.0.1](https://github.com/AlaskaAirlines/auro-nav/compare/v1.0.0...v1.0.1) (2023-02-28)
 
 
