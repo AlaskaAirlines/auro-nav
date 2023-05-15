@@ -28,8 +28,7 @@
   "peerDependencies": {
     "@alaskaairux/design-tokens": "^3.12.1",
     "@alaskaairux/icons": "^4.19.0",
-    "@alaskaairux/webcorestylesheets": "^3.7.3",
-    "@webcomponents/webcomponentsjs": "^2.7.0"
+    "@alaskaairux/webcorestylesheets": "^3.7.3"
   },
   "devDependencies": {
     "@alaskaairux/design-tokens": "^3.12.1",
@@ -45,7 +44,6 @@
     "@web/dev-server": "^0.1.35",
     "@web/test-runner": "^0.15.0",
     "autoprefixer": "^10.4.13",
-    "babel-loader": "^9.1.0",
     "compression": "^1.7.4",
     "concat": "^1.0.3",
     "concurrently": "^7.6.0",
@@ -56,16 +54,12 @@
     "husky": "^8.0.0",
     "lodash": "^4.17.21",
     "markdown-magic": "^2.6.1",
-    "marked": "^4.2.4",
     "nodemon": "^2.0.20",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.20",
-    "postcss-custom-properties": "^13.1.1",
-    "postcss-discard-comments": "^5.1.2",
+    "postcss-discard-comments": "^6.0.0",
     "postcss-rem-to-pixel": "^4.1.2",
-    "postcss-remove-rules": "^1.0.0",
     "postcss-selector-replace": "^1.0.2",
-    "prismjs": "^1.29.0",
     "rollup": "^2.70.1",
     "rollup-plugin-serve": "^1.1.0",
     "sass": "^1.58.0",
@@ -81,10 +75,14 @@
     "whatwg-fetch": "^3.6.2",
     "yaml-lint": "^1.7.0"
   },
+  "overrides": {
+    "wc-sass-render": {
+      "sass": "$sass"
+    }
+  },
   "browserslist": [
     "last 2 Chrome versions",
     "last 2 iOS major versions",
-    "ie 11",
     "last 2 Firefox versions",
     "last 2 Edge versions",
     "last 2 Safari major versions"
@@ -152,11 +150,11 @@
     "demo:new:build": "mkdir ./build && mkdir ./build/css && mkdir ./build/demo",
     "demo:rm:build": "rm -rf ./build",
     "demo:update:index": "node ./scripts/prepForBuild",
-    "dev": "concurrently --kill-others 'npm run build:watch' 'npm run serve'",
+    "dev": "concurrently --kill-others \"npm run build:watch\" \"npm run serve\"",
     "esLint": "./node_modules/.bin/eslint src/**/*.js",
     "linters": "npm-run-all scssLint esLint",
     "preCommit": "node scripts/pre-commit.mjs",
-    "postCss:component": "node ./scripts/postCss.mjs",
+    "postCss:component": "node ./scripts/postCss.js",
     "postinstall": "node packageScripts/postinstall.mjs",
     "sass:render": "sass-render src/*.css -t ./scripts/staticStyles-template.js",
     "serve": "web-dev-server --open demo/ --node-resolve --watch",

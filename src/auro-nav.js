@@ -16,7 +16,6 @@ import {classMap} from 'lit/directives/class-map.js';
 
 // Import touch detection lib
 import styleCss from "./style-css.js";
-import styleCssFixed from './style-fixed-css.js';
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -65,8 +64,7 @@ export class AuroNav extends LitElement {
 
   static get styles() {
     return [
-      styleCss,
-      styleCssFixed
+      styleCss
     ];
   }
 
