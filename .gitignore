@@ -19,3 +19,6 @@ build/
 
 ## Karma code coverage reports
 coverage/
+
+# README that builds out docs
+docTemplates/

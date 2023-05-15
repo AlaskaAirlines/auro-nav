@@ -23,3 +23,11 @@ index.html
 # ignore src
 src/**/*.scss
 src/**/*.css
+
+apiExamples/
+build/
+docTemplates/
+index/
+
+LICENSE
+NOTICE
