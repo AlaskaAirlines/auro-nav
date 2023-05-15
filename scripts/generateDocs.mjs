@@ -1,5 +1,13 @@
-const path = require('path');
-const chalk = require('chalk');
+import chalk from 'chalk';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const markdownMagic = require('markdown-magic');
 const fs = require('fs');
 const https = require('https');
@@ -19,7 +27,7 @@ const readmeFilePath = dirDocTemplates + '/README.md';
     }
   })
 
-  pName = JSON.parse(packageJson).name;
+  const pName = JSON.parse(packageJson).name;
 
   let npmStart = pName.indexOf('@');
   let namespaceStart = pName.indexOf('/');
