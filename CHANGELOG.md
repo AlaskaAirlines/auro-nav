@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.1.1](https://github.com/AlaskaAirlines/auro-nav/compare/v1.1.0...v1.1.1) (2023-05-16)
+
+
+### Performance Improvements
+
+* **ts:** add support for typescript users [#19](https://github.com/AlaskaAirlines/auro-nav/issues/19) ([08e487c](https://github.com/AlaskaAirlines/auro-nav/commit/08e487c26d41259293774fecf837b863b19ae8ea))
+
 # [1.1.0](https://github.com/AlaskaAirlines/auro-nav/compare/v1.0.1...v1.1.0) (2023-05-12)
 
 
