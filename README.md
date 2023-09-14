@@ -30,7 +30,6 @@ For the most up to date information on [UI development browser support](https://
 [![Build Status](https://img.shields.io/github/actions/workflow/status/AlaskaAirlines/auro-nav/testPublish.yml?style=for-the-badge)](https://github.com/AlaskaAirlines/auro-nav/actions/workflows/testPublish.yml)
 [![See it on NPM!](https://img.shields.io/npm/v/@aurodesignsystem/auro-nav?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@aurodesignsystem/auro-nav)
 [![License](https://img.shields.io/npm/l/@aurodesignsystem/auro-nav?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
-[![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/@aurodesignsystem/auro-nav?style=for-the-badge)](https://snyk.io/test/npm/@aurodesignsystem/auro-nav?tab=issues)
 
 ```shell
 $ npm i @aurodesignsystem/auro-nav
@@ -78,9 +77,9 @@ We recommend you load these bundles using [differential serving](https://philipw
 
 ```html
 <!-- **NOTE:** Be sure to replace `@latest` in the URL with the version of the asset you want. @latest is NOT aware of any MAJOR releases, use at your own risk. -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/bundled/essentials.css" />
-<script src="https://cdn.jsdelivr.net/@aurodesignsystem/auro-nav@latest/dist/auro-nav__bundled.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-nav@latest/dist/auro-nav__bundled.js" type="module"></script>
 ```
 
 ## auro-nav use cases
@@ -137,8 +136,4 @@ Automated tests are required for every Auro component. See `.\test\auro-nav.test
 ### Bundled assets
 
 Bundled assets are only generated in the remote and not merged back to this repo. To review and/or test a bundled asset locally, run `$ npm run bundler` to generate assets.
-
-### Demo deployment
-
-To deploy a demo version of the component for review, run `npm run build:demo` to create a `./build` directory that can be pushed to any static server.
 
