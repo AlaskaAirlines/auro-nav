@@ -4,11 +4,10 @@
 // ---------------------------------------------------------------------
 
 // Import Auro tokens
-@import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
-@import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties';
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
 
-@import './../node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints';
-@import './../node_modules/@alaskaairux/webcorestylesheets/dist/core';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
 
 /* stylelint-disable selector-no-qualifying-type, declaration-empty-line-before,  order/properties-order */
 
@@ -31,16 +30,16 @@
     position: relative;
     display: inline-block;
 
-    width: var(--auro-size-300);
-    height: var(--auro-size-300);
+    width: var(--ds-size-300, $ds-size-300);
+    height: var(--ds-size-300, $ds-size-300);
 
     top: -1px;
-    line-height: var(--auro-size-300);
+    line-height: var(--ds-size-300, $ds-size-300);
 
     margin-right: 5px;
-    margin-left: var(--auro-size-100);
+    margin-left: var(--ds-size-100, $ds-size-100);
 
-    background-color: var(--auro-color-icon-primary-on-light);
+    background-color: var(--ds-color-icon-primary-default, $ds-color-icon-primary-default);
     content: '';
 
     -webkit-mask-box-image: url('https://unpkg.com/@alaskaairux/icons@latest/dist/icons/interface/chevron-right.svg');
@@ -49,11 +48,11 @@
   }
 
   a {
-    color: var(--auro-color-ui-default-on-light);
+    color: var(--ds-color-ui-default-default, $ds-color-ui-default-default);
     text-decoration: none; // stylelint-disable-line no-eol-whitespace
   }
-  
-  @include auro_breakpoint($max: $auro-breakpoint-sm) {
+
+  @include auro_breakpoint($max: $ds-grid-breakpoint-sm) {
     // Displays left chevron icon
     ::slotted(auro-icon[name='chevron-left']) {
       display: inline-block;
@@ -79,7 +78,7 @@
 
 // Last breadcrumb should act as a disabled breadcrumb
 :host(:last-of-type) {
-  color: var(--auro-color-text-secondary-on-light);
+  color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
 
   // Hides last breadcrumb divider
   &:after {
@@ -89,7 +88,7 @@
 
 // Hides all breadcrumbs besides the second to last one
 :host(:not(:nth-last-of-type(2))) {
-  @include auro_breakpoint($max: $auro-breakpoint-sm) {
+  @include auro_breakpoint($max: $ds-grid-breakpoint-sm) {
     display: none;
   }
 }

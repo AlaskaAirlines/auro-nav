@@ -3,27 +3,29 @@
 
 // ---------------------------------------------------------------------
 
-// Import Auro tokens
-@import './../node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints';
-@import './../node_modules/@alaskaairux/webcorestylesheets/dist/core';
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
 
-/* stylelint-disable declaration-empty-line-before, declaration-no-important, order/properties-order */
+// Import Auro tokens
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
+
+/* stylelint-disable declaration-empty-line-before, declaration-no-important, order/properties-order, max-line-length */
 
 :host {
   display: block;
   border: 1px solid transparent;
-  border-left: 1px solid var(--auro-color-border-divider-on-light);
+  border-left: 1px solid var(--ds-color-border-divider-default, $ds-color-border-divider-default);
 
   a {
     display: block;
-    color: var(--auro-color-text-secondary-on-light) !important;
+    color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default) !important;
     text-decoration: none;
 
-    font-size: var(--auro-text-body-size-sm);
+    font-size: var(--ds-text-body-size-sm, $ds-text-body-size-sm);
 
     width: 100%;
 
-    padding: var(--auro-size-100) var(--auro-size-200) var(--auro-size-100) var(--auro-size-200);
+    padding: var(--ds-size-100, $ds-size-100) var(--ds-size-200, $ds-size-200) var(--ds-size-100, $ds-size-100) var(--ds-size-200, $ds-size-200);
 
     &:focus {
       background-color: unset;
@@ -35,17 +37,17 @@
 :host([active]),
 :host(:hover) {
   a {
-    color: var(--auro-color-text-primary-on-light) !important;
+    color: var(--ds-color-text-primary-default, $ds-color-text-primary-default) !important;
   }
 }
 
 :host(:focus) {
-  border: 1px solid var(--auro-color-border-active-on-light);
+  border: 1px solid var(--ds-color-border-active-default, $ds-color-border-active-default);
   border-radius: 5px;
 }
 
 :host(:focus:hover) {
   a {
-    color: var(--auro-color-text-primary-on-light) !important;
+    color: var(--ds-color-text-primary-default, $ds-color-text-primary-default) !important;
   }
 }
