@@ -1,4 +1,5 @@
-
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../api.md) -->
+<!-- The below content is automatically added from ./../api.md -->
 
 # auro-nav-breadcrumb
 
@@ -29,6 +30,7 @@
 | Part   | Description                  |
 |--------|------------------------------|
 | [link](#link) | Apply CSS to the `a` element |
+<!-- AURO-GENERATED-CONTENT:END -->
 
 ## API Examples
 
@@ -38,6 +40,8 @@ Example when the `auro-nav` slot is populated with `auro-nav-breadcrumb` element
 the current page the user is on. It should reflect a disabled hyperlink and the `href` attribute should **NOT** be populated.
 
 <div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/breadcrumb.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/breadcrumb.html -->
   <auro-nav>
     <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Home</auro-breadcrumb>
     <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 2</auro-breadcrumb>
@@ -45,9 +49,12 @@ the current page the user is on. It should reflect a disabled hyperlink and the 
     <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 4</auro-breadcrumb>
     <auro-breadcrumb>Current</auro-breadcrumb>
   </auro-nav>
+  <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/breadcrumb.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/breadcrumb.html -->
 
 ```html
 <auro-nav>
@@ -58,5 +65,5 @@ the current page the user is on. It should reflect a disabled hyperlink and the 
   <auro-breadcrumb>Current</auro-breadcrumb>
 </auro-nav>
 ```
-
+<!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>

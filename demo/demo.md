@@ -1,11 +1,17 @@
 # Nav
 
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
+<!-- The below content is automatically added from ./description.md -->
 `<auro-nav>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of showing users a secondary navigation aid that helps them understand the relation between the location of their current page and higher level pages.
+<!-- AURO-GENERATED-CONTENT:END -->
 
 ## About auro-nav
 
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
+<!-- The below content is automatically added from ./useCases.md -->
 The `<auro-nav>` element acts as a container for a series of links representing a level of depth in the site content. 
 The `<auro-nav>` element should only be used for multi-page projects that have 3 to 5 levels of page depth.
+<!-- AURO-GENERATED-CONTENT:END -->
 
 ## Example(s)
 
@@ -15,6 +21,8 @@ Example using `auro-breadcrumb` for each link. This example renders as a horizon
 will display a home icon, all links will have a right chevron as a divider, and the last link will be disabled.
 
 <div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/breadcrumb.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/breadcrumb.html -->
   <auro-nav>
     <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Home</auro-breadcrumb>
     <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 2</auro-breadcrumb>
@@ -22,9 +30,12 @@ will display a home icon, all links will have a right chevron as a divider, and 
     <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 4</auro-breadcrumb>
     <auro-breadcrumb>Current</auro-breadcrumb>
   </auro-nav>
+  <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/breadcrumb.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/breadcrumb.html -->
 
 ```html
 <auro-nav>
@@ -35,12 +46,14 @@ will display a home icon, all links will have a right chevron as a divider, and 
   <auro-breadcrumb>Current</auro-breadcrumb>
 </auro-nav>
 ```
-
+<!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
 ### Anchornav
 
 <div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/anchornav.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/anchornav.html -->
   <style>
     .anchorNavWithContentContainer {
       display: flex;
@@ -96,9 +109,12 @@ will display a home icon, all links will have a right chevron as a divider, and 
       <auro-anchorlink href="#sectionFive">Section 5</auro-anchorlink>
     </auro-nav>
   </div>
+  <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/anchornav.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/anchornav.html -->
 
 ```html
 <style>
@@ -157,5 +173,5 @@ will display a home icon, all links will have a right chevron as a divider, and 
   </auro-nav>
 </div>
 ```
-
+<!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
