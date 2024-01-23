@@ -1,5 +1,18 @@
 # Semantic Release Automated Changelog
 
+# [1.2.0](https://github.com/AlaskaAirlines/auro-nav/compare/v1.1.1...v1.2.0) (2024-01-23)
+
+
+### Features
+
+* **ssr:** add support for SSR projects [#30](https://github.com/AlaskaAirlines/auro-nav/issues/30) ([88f1fda](https://github.com/AlaskaAirlines/auro-nav/commit/88f1fda9661bff45028980633e151d5ede51e066))
+
+
+### Performance Improvements
+
+* **node:** update repo to support node 20 ([20d4e6c](https://github.com/AlaskaAirlines/auro-nav/commit/20d4e6cd113f8cad8c433644374bd5a8fc419a5e))
+* **tokens:** update tokens to use new --ds prefix [#27](https://github.com/AlaskaAirlines/auro-nav/issues/27) ([700791a](https://github.com/AlaskaAirlines/auro-nav/commit/700791ae9ba15f5cc62f3c8282b184a679825353))
+
 ## [1.1.1](https://github.com/AlaskaAirlines/auro-nav/compare/v1.1.0...v1.1.1) (2023-05-16)
 
 
