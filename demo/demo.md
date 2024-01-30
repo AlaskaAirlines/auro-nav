@@ -32,7 +32,7 @@ will display a home icon, all links will have a right chevron as a divider, and 
   </auro-nav>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/breadcrumb.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/breadcrumb.html -->
@@ -111,7 +111,7 @@ will display a home icon, all links will have a right chevron as a divider, and 
   </div>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/anchornav.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/anchornav.html -->

@@ -12,7 +12,7 @@ import {classMap} from 'lit/directives/class-map.js';
 // If using auroElement base class
 // See instructions for importing auroElement base class https://git.io/JULq4
 // import { html, css } from "lit-element";
-// import AuroElement from '@alaskaairux/webcorestylesheets/dist/auroElement/auroElement';
+// import AuroElement from '@aurodesignsystem/webcorestylesheets/dist/auroElement/auroElement';
 
 // Import touch detection lib
 import styleCss from "./style-css.js";
