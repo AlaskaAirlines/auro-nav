@@ -51,7 +51,7 @@ the current page the user is on. It should reflect a disabled hyperlink and the 
   </auro-nav>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/breadcrumb.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/breadcrumb.html -->
