@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [1.2.1](https://github.com/AlaskaAirlines/auro-nav/compare/v1.2.0...v1.2.1) (2024-01-31)
+
+
+### Performance Improvements
+
+* alaskaairux ref updates ([42b4497](https://github.com/AlaskaAirlines/auro-nav/commit/42b4497e6de7ac111517a0ed081e9875e95718c0))
+* **cdn:** update links from unpkg to jsdelivr ([976cabb](https://github.com/AlaskaAirlines/auro-nav/commit/976cabbf0b17ee9d640b516b38fa22bfcfc0c169))
+
 # [1.2.0](https://github.com/AlaskaAirlines/auro-nav/compare/v1.1.1...v1.2.0) (2024-01-23)
 
 
