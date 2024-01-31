@@ -42,8 +42,8 @@
     background-color: var(--ds-color-icon-primary-default, $ds-color-icon-primary-default);
     content: '';
 
-    -webkit-mask-box-image: url('https://unpkg.com/@alaskaairux/icons@latest/dist/icons/interface/chevron-right.svg');
-    mask-image: url('https://unpkg.com/@alaskaairux/icons@latest/dist/icons/interface/chevron-right.svg');
+    -webkit-mask-box-image: url('https://cdn.jsdelivr.net/npm/@alaskaairux/icons@latest/dist/icons/interface/chevron-right.svg');
+    mask-image: url('https://cdn.jsdelivr.net/npm/@alaskaairux/icons@latest/dist/icons/interface/chevron-right.svg');
     mask-repeat: no-repeat;
   }
 
