@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.2.2](https://github.com/AlaskaAirlines/auro-nav/compare/v1.2.1...v1.2.2) (2024-02-12)
+
+
+### Performance Improvements
+
+* update for ESM support ([b712222](https://github.com/AlaskaAirlines/auro-nav/commit/b7122227f240d3e50ecf12acfe5b71c14c3f7104))
+
 ## [1.2.1](https://github.com/AlaskaAirlines/auro-nav/compare/v1.2.0...v1.2.1) (2024-01-31)
 
 
