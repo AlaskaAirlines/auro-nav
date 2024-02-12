@@ -4,7 +4,7 @@
 // ---------------------------------------------------------------------
 
 import styleAnchorlinkCss from "./style-anchorlink-css.js";
-import styleCssAuroHyperlink from "@aurodesignsystem/auro-hyperlink/src/style-css";
+import styleCssAuroHyperlink from "@aurodesignsystem/auro-hyperlink/src/style-css.js";
 
 import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.mjs";
 

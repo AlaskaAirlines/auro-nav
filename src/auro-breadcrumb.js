@@ -5,7 +5,7 @@
 
 // Import touch detection lib
 import styleBreadcrumbCss from "./style-breadcrumb-css.js";
-import styleCssAuroHyperlink from "@aurodesignsystem/auro-hyperlink/src/style-css";
+import styleCssAuroHyperlink from "@aurodesignsystem/auro-hyperlink/src/style-css.js";
 
 import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.mjs";
 
