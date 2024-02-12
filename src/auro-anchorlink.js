@@ -6,7 +6,7 @@
 import styleAnchorlinkCss from "./style-anchorlink-css.js";
 import styleCssAuroHyperlink from "@aurodesignsystem/auro-hyperlink/src/style-css";
 
-import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.js";
+import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.mjs";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
