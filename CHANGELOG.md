@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.2.6](https://github.com/AlaskaAirlines/auro-nav/compare/v1.2.5...v1.2.6) (2024-02-16)
+
+
+### Performance Improvements
+
+* update deps and refs to hyperlink ([a0a8ff2](https://github.com/AlaskaAirlines/auro-nav/commit/a0a8ff2f992c8e2aea7dc2726747d7b2c81a12bc))
+
 ## [1.2.5](https://github.com/AlaskaAirlines/auro-nav/compare/v1.2.4...v1.2.5) (2024-02-14)
 
 
