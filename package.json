@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@aurodesignsystem/auro-button": "^7.2.7",
-    "@aurodesignsystem/auro-hyperlink": "^3.5.5",
+    "@aurodesignsystem/auro-hyperlink": "^3.5.6",
     "chalk": "^5.3.0",
     "lit": "^3.1.0",
     "typescript": "^5.3.3"
@@ -62,9 +62,9 @@
     "postcss-discard-comments": "^6.0.1",
     "postcss-rem-to-pixel": "^4.1.2",
     "postcss-selector-replace": "^1.0.2",
-    "rollup": "^4.10.0",
+    "rollup": "^4.12.0",
     "rollup-plugin-serve": "^1.1.1",
-    "sass": "^1.70.0",
+    "sass": "^1.71.0",
     "semantic-release": "^23.0.2",
     "stylelint": "^16.2.1",
     "stylelint-config-idiomatic-order": "^10.0.0",
