@@ -30,7 +30,7 @@ will display a home icon, all links will have a right chevron as a divider, and 
 
 ### Anchornav
 
-The anchornav variation of `auro-nav` is a vertical list of link elements mapped to anchor elements in the designated scrollable element. As the content is scrolled, the marker will animate to highlight the currently viewed section of the content.
+This example shows a user how set up an `auro-nav` component using `auro-anchorlinks` to efficiently jump to different points in the content.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/anchornav.html) -->
