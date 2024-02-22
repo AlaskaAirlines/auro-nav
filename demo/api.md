@@ -70,7 +70,7 @@ the current page the user is on. It should reflect a disabled hyperlink and the 
 
 ### Anchornav
 
-Example when the `auro-nav` slot is populated with `auro-anchorlink` elements.
+This example shows a user how set up an `auro-nav` component using `auro-anchorlinks` to efficiently jump to different points in the content.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/anchornav.html) -->
