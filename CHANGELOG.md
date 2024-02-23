@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.2.8](https://github.com/AlaskaAirlines/auro-nav/compare/v1.2.7...v1.2.8) (2024-02-23)
+
+
+### Performance Improvements
+
+* **examples:** refactor examples ([0bac259](https://github.com/AlaskaAirlines/auro-nav/commit/0bac2594e836392a6a263505081e93c0817d6769))
+
 ## [1.2.7](https://github.com/AlaskaAirlines/auro-nav/compare/v1.2.6...v1.2.7) (2024-02-18)
 
 
