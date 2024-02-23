@@ -21,3 +21,19 @@ the current page the user is on. It should reflect a disabled hyperlink and the 
 
 </auro-accordion>
 
+### Anchornav
+
+Example when the `auro-nav` slot is populated with `auro-anchorlink` elements.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/anchornav.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/anchornav.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
