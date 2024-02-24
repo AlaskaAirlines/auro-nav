@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.2.9](https://github.com/AlaskaAirlines/auro-nav/compare/v1.2.8...v1.2.9) (2024-02-24)
+
+
+### Performance Improvements
+
+* **custom:** implement custom registration example ([026acef](https://github.com/AlaskaAirlines/auro-nav/commit/026acef30f3d3bacc71ac67e1ab9c8bcbf7a89d4))
+
 ## [1.2.8](https://github.com/AlaskaAirlines/auro-nav/compare/v1.2.7...v1.2.8) (2024-02-23)
 
 
