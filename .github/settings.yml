@@ -3,7 +3,7 @@ repository:
   # See https://github.com/apps/settings for app settings
 
   # A short description of the repository that will show up on GitHub
-  description: Custom element that ....
+  description: Custom element for the purpose of showing users a secondary navigation aid that helps them understand the relation between the location of their current page and higher level pages.
 
   # A URL with more information about the repository
   homepage: https://auro.alaskaair.com/components/auro/nav
