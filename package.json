@@ -20,7 +20,7 @@
     "node": "18.x || 20.x"
   },
   "dependencies": {
-    "@aurodesignsystem/auro-button": "^7.2.8",
+    "@aurodesignsystem/auro-button": "^7.2.9",
     "@aurodesignsystem/auro-hyperlink": "^3.5.8",
     "chalk": "^5.3.0",
     "lit": "^3.1.0",
@@ -28,6 +28,7 @@
   },
   "peerDependencies": {
     "@alaskaairux/icons": "^4.36.2",
+    "@aurodesignsystem/auro-icon": "^4.3.1",
     "@aurodesignsystem/design-tokens": "^4.3.0",
     "@aurodesignsystem/webcorestylesheets": "^5.0.8"
   },
@@ -51,7 +52,7 @@
     "concurrently": "^8.2.2",
     "copyfiles": "^2.4.1",
     "core-js": "^3.36.0",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "eslint-plugin-jsdoc": "^48.2.0",
     "husky": "^9.0.11",
     "lodash": "^4.17.21",
