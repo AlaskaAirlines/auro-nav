@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.2.10](https://github.com/AlaskaAirlines/auro-nav/compare/v1.2.9...v1.2.10) (2024-02-26)
+
+
+### Performance Improvements
+
+* **deps:** update to latest dependencies ([86751da](https://github.com/AlaskaAirlines/auro-nav/commit/86751da15c4a530bdf2ee5076690b94cbd93abbd))
+
 ## [1.2.9](https://github.com/AlaskaAirlines/auro-nav/compare/v1.2.8...v1.2.9) (2024-02-24)
 
 
