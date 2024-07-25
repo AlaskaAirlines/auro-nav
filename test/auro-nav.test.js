@@ -54,7 +54,7 @@ describe('auro-nav', () => {
 
     await expect(nav.hasAttribute('aria-expanded')).to.be.false;
 
-    const button = nav.shadowRoot.querySelector('auro-button');
+    const button = nav.shadowRoot.querySelector('.showHideBtn');
 
     button.click();
 
