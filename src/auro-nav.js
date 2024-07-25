@@ -3,18 +3,21 @@
 
 // ---------------------------------------------------------------------
 
-/* eslint-disable max-classes-per-file, array-bracket-newline, max-params, max-lines */
+/* eslint-disable max-classes-per-file, array-bracket-newline, max-params, max-lines, no-underscore-dangle, lit/binding-positions, lit/no-invalid-html */
 
 // If using litElement base class
-import { LitElement, html } from "lit";
-import {classMap} from 'lit/directives/class-map.js';
+import { LitElement } from "lit";
+import { html } from 'lit/static-html.js';
+import { classMap } from 'lit/directives/class-map.js';
 
-// If using auroElement base class
-// See instructions for importing auroElement base class https://git.io/JULq4
-// import { html, css } from "lit-element";
-// import AuroElement from '@aurodesignsystem/webcorestylesheets/dist/auroElement/auroElement';
+import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
 
-// Import touch detection lib
+import { AuroButton } from '@aurodesignsystem/auro-button/src/auro-button.js';
+import buttonVersion from './buttonVersion';
+
+import { AuroIcon } from '@aurodesignsystem/auro-icon/src/auro-icon.js';
+import iconVersion from './iconVersion';
+
 import styleCss from "./style-css.js";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
@@ -34,6 +37,18 @@ export class AuroNav extends LitElement {
     super();
 
     this.anchorNavContent = undefined;
+
+    const versioning = new AuroDependencyVersioning();
+
+    /**
+     * @private
+     */
+    this.buttonTag = versioning.generateTag('auro-button', buttonVersion, AuroButton);
+
+    /**
+     * @private
+     */
+    this.iconTag = versioning.generateTag('auro-icon', iconVersion, AuroIcon);
 
     /**
      * @private
@@ -189,7 +204,7 @@ export class AuroNav extends LitElement {
    * @returns {void} Configures icon to be placed within each hyperlink.
    */
   insertIcon(link, category, name, size) {
-    const icon = document.createElement('auro-icon');
+    const icon = document.createElement(this.iconTag._$litStatic$);
 
     icon.setAttribute('customSize', true);
     icon.setAttribute('customColor', true);
@@ -292,14 +307,14 @@ export class AuroNav extends LitElement {
         <slot @slotchange="${this.handleSlotItems}"></slot>
       </div>
       ${this.anchorlinks && this.anchorlinks.length > this.mobileViewCollapsedNumLinks ? html`
-        <auro-button slim tertiary class="showHideBtn" @click=${this.toggleAnchorLinks}>
+        <${this.buttonTag} slim tertiary class="showHideBtn" @click=${this.toggleAnchorLinks}>
           <span more>
             <slot name="mobileToggleExpanded"></slot>
           </span>
           <span less>
             <slot name="mobileToggleCollapsed"></slot>
           </span>
-        </auro-button>
+        </${this.buttonTag}>
       ` : undefined}
       ${this.anchorlinks ? html`
         <div id="anchorMarker" class="anchorMarker"></div>
