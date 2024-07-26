@@ -21,7 +21,7 @@
     }
   }
 
-  ::slotted(auro-icon[name='chevron-left']) {
+  ::slotted([name='chevron-left']) {
     display: none;
   }
 
@@ -39,7 +39,6 @@
     margin-right: 5px;
     margin-left: var(--ds-size-100, $ds-size-100);
 
-    background-color: var(--ds-color-icon-primary-default, $ds-color-icon-primary-default);
     content: '';
 
     -webkit-mask-box-image: url('https://cdn.jsdelivr.net/npm/@alaskaairux/icons@latest/dist/icons/interface/chevron-right.svg');
@@ -48,18 +47,17 @@
   }
 
   a {
-    color: var(--ds-color-ui-default-default, $ds-color-ui-default-default);
     text-decoration: none; // stylelint-disable-line no-eol-whitespace
   }
 
   @include auro_breakpoint($max: $ds-grid-breakpoint-sm) {
     // Displays left chevron icon
-    ::slotted(auro-icon[name='chevron-left']) {
+    ::slotted([name='chevron-left']) {
       display: inline-block;
     }
 
     // Hides the home icon for all breadcrumbs
-    ::slotted(auro-icon[name='home-stroke']) {
+    ::slotted([name='home-stroke']) {
       display: none;
     }
 
@@ -71,15 +69,13 @@
 
 // Hides the home icon for all breadcrumbs besides the first
 :host(:not(:first-of-type)) {
-  ::slotted(auro-icon[name='home-stroke']) {
+  ::slotted([name='home-stroke']) {
     display: none;
   }
 }
 
 // Last breadcrumb should act as a disabled breadcrumb
 :host(:last-of-type) {
-  color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
-
   // Hides last breadcrumb divider
   &:after {
     content: unset;
