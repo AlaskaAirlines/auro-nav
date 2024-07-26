@@ -196,3 +196,29 @@ This example shows a user how set up an `auro-nav` component using `auro-anchorl
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
+
+### Theme Support
+
+The component may be restyled using the following code sample and changing the values of the following token(s).
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../src/tokens.scss) -->
+<!-- The below code snippet is automatically added from ./../../src/tokens.scss -->
+
+```scss
+/* stylelint-disable color-function-notation, number-max-precision, color-hex-length */
+
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+
+:host {
+  --ds-auro-anchornav-label-color: var(--ds-color-text-secondary-default, #{$ds-color-text-secondary-default});
+  --ds-auro-anchornav-mobile-background-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.0001) 0%, rgba(255, 255, 255, 0.00874633) 6.67%, rgba(255, 255, 255, 0.0356065) 13.33%, rgba(255, 255, 255, 0.0817517) 20%, rgba(255, 255, 255, 0.147497) 26.67%, rgba(255, 255, 255, 0.231852) 33.33%, rgba(255, 255, 255, 0.331951) 40%, rgba(255, 255, 255, 0.442747) 46.67%, rgba(255, 255, 255, 0.557353) 53.33%, rgba(255, 255, 255, 0.668149) 60%, rgba(255, 255, 255, 0.768248) 66.67%, rgba(255, 255, 255, 0.852603) 73.33%, rgba(255, 255, 255, 0.918348) 80%, rgba(255, 255, 255, 0.964494) 86.67%, rgba(255, 255, 255, 0.991354) 93.33%, #FFFFFF 100%);
+  --ds-auro-anchornav-selected-marker-color: var(--ds-color-border-primary-default, #{$ds-color-border-primary-default});
+  --ds-auro-anchorlink-border-color: transparent;
+  --ds-auro-anchorlink-default-marker-color: var(--ds-color-border-divider-default, #{$ds-color-border-divider-default});
+  --ds-auro-anchorlink-text-color: var(--ds-color-text-tertiary-default, #{$ds-color-text-tertiary-default});
+  --ds-auro-breadcrumb-chevron-color: var(--ds-color-icon-secondary-default, #{$ds-color-icon-secondary-default});
+  --ds-auro-breadcrumb-icon-color: var(--ds-color-icon-ui-default-default, #{$ds-color-icon-ui-default-default});
+  --ds-auro-breadcrumb-last-link-text-color: var(--ds-color-text-tertiary-default, #{$ds-color-text-tertiary-default});
+}
+```
+<!-- AURO-GENERATED-CONTENT:END -->

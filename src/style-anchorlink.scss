@@ -3,22 +3,22 @@
 
 // ---------------------------------------------------------------------
 
+/* stylelint-disable declaration-empty-line-before, declaration-no-important, order/properties-order, max-line-length, scss/double-slash-comment-empty-line-before */
+
 @import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
 
 // Import Auro tokens
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
 
-/* stylelint-disable declaration-empty-line-before, declaration-no-important, order/properties-order, max-line-length */
-
 :host {
   display: block;
-  border: 1px solid transparent;
-  border-left: 1px solid var(--ds-color-border-divider-default, $ds-color-border-divider-default);
+  
+  border-width: 1px;
+  border-style: solid;
 
   a {
     display: block;
-    color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default) !important;
     text-decoration: none;
 
     font-size: var(--ds-text-body-size-sm, $ds-text-body-size-sm);
@@ -28,26 +28,13 @@
     padding: var(--ds-size-100, $ds-size-100) var(--ds-size-200, $ds-size-200) var(--ds-size-100, $ds-size-100) var(--ds-size-200, $ds-size-200);
 
     &:focus {
-      background-color: unset;
       outline: unset;
     }
   }
 }
 
-:host([active]),
-:host(:hover) {
-  a {
-    color: var(--ds-color-text-primary-default, $ds-color-text-primary-default) !important;
-  }
-}
-
 :host(:focus) {
-  border: 1px solid var(--ds-color-border-active-default, $ds-color-border-active-default);
+  border-width: 1px;
+  border-style: solid;
   border-radius: 5px;
-}
-
-:host(:focus:hover) {
-  a {
-    color: var(--ds-color-text-primary-default, $ds-color-text-primary-default) !important;
-  }
 }
