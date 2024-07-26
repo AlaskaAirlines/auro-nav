@@ -3,7 +3,7 @@
 
 // ---------------------------------------------------------------------
 
-/* eslint-disable max-classes-per-file, array-bracket-newline, max-params, max-lines, no-underscore-dangle, lit/binding-positions, lit/no-invalid-html */
+/* eslint-disable max-params, max-lines, no-underscore-dangle, lit/binding-positions, lit/no-invalid-html */
 
 // If using litElement base class
 import { LitElement } from "lit";
@@ -19,6 +19,8 @@ import { AuroIcon } from '@aurodesignsystem/auro-icon/src/auro-icon.js';
 import iconVersion from './iconVersion';
 
 import styleCss from "./style-css.js";
+import colorCss from "./color-css";
+import tokensCss from "./tokens-css";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -79,7 +81,9 @@ export class AuroNav extends LitElement {
 
   static get styles() {
     return [
-      styleCss
+      styleCss,
+      colorCss,
+      tokensCss
     ];
   }
 

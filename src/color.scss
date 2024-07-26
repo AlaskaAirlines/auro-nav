@@ -1,0 +1,29 @@
+// Copyright (c) 2024 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
+// See LICENSE in the project root for license information.
+
+// ---------------------------------------------------------------------
+
+/* stylelint-disable selector-class-pattern */
+
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
+
+:host([anchornav]) {
+  .label-container {
+    color: var(--ds-auro-anchornav-label-color);
+  }
+}
+
+:host([anchornav]:not([aria-expanded])) {
+  @include auro_breakpoint($max: $ds-grid-breakpoint-sm) {
+    &:before {
+      background: var(--ds-auro-anchornav-mobile-background-gradient);
+    }
+  }
+}
+
+.anchorMarker {
+  background: var(--ds-auro-anchornav-selected-marker-color);
+}

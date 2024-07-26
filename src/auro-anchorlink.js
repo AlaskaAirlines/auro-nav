@@ -4,7 +4,11 @@
 // ---------------------------------------------------------------------
 
 import styleAnchorlinkCss from "./style-anchorlink-css.js";
+import colorAnchorlinkCss from "./color-anchorlink-css.js";
+import tokensCss from "./tokens-css.js";
+
 import styleCssAuroHyperlink from "@aurodesignsystem/auro-hyperlink/src/style-css.js";
+import colorCssAuroHyperlink from "@aurodesignsystem/auro-hyperlink/src/color-css.js";
 
 import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.js";
 
@@ -30,7 +34,10 @@ export class AuroAnchorlink extends AuroHyperlink {
   static get styles() {
     return [
       styleCssAuroHyperlink,
-      styleAnchorlinkCss
+      colorCssAuroHyperlink,
+      styleAnchorlinkCss,
+      colorAnchorlinkCss,
+      tokensCss
     ];
   }
 
