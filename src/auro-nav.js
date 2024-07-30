@@ -298,11 +298,11 @@ export class AuroNav extends LitElement {
 
   // function that renders the HTML and CSS into  the scope of the component
   render() {
-
     const labelClasses = {
       'hidden': this.labelHidden,
       'label-container': true
     };
+
     return html`
       <div aria-label="navigation" role="navigation">
         <div class=${classMap(labelClasses)}>

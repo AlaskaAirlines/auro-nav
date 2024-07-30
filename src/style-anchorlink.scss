@@ -31,6 +31,11 @@
       outline: unset;
     }
   }
+
+  .hyperlink {
+    // Wraps text in auro-anchorlink
+    white-space: unset;
+  }
 }
 
 :host(:focus) {
