@@ -1,5 +1,18 @@
 # Semantic Release Automated Changelog
 
+# [1.3.0-beta.1](https://github.com/AlaskaAirlines/auro-nav/compare/v1.2.10...v1.3.0-beta.1) (2024-08-05)
+
+
+### Bug Fixes
+
+* **textwrap:** update styles to fix text wrap UI error ([ab25013](https://github.com/AlaskaAirlines/auro-nav/commit/ab250134d0271fe990e8cd7e802d34aa77bdc177))
+
+
+### Features
+
+* add custom versioned auro components ([fec94c3](https://github.com/AlaskaAirlines/auro-nav/commit/fec94c3871001108763e3515b50f432dd0cd838f))
+* implement color theming support [#39](https://github.com/AlaskaAirlines/auro-nav/issues/39) ([b30010c](https://github.com/AlaskaAirlines/auro-nav/commit/b30010c360a354ffe0677c2414dab81f1c1d759c))
+
 ## [1.2.10](https://github.com/AlaskaAirlines/auro-nav/compare/v1.2.9...v1.2.10) (2024-02-26)
 
 
