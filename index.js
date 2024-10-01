@@ -2,19 +2,8 @@ import { AuroBreadcrumb } from './src/auro-breadcrumb.js';
 import { AuroAnchorlink } from './src/auro-anchorlink.js';
 import { AuroNav } from './src/auro-nav.js';
 
-/**
- * Register Custom Element.
- * @param {String} name - Name to use for custom element.
- * @param {Function} className - Class name to use for custom element.
- * @returns {void}
- */
-export function registerComponent(name, className) {
-  // alias definition
-  if (!customElements.get(name)) {
-    customElements.define(name, class extends className {});
-  }
-}
+import * as RuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
 
-registerComponent('auro-breadcrumb', AuroBreadcrumb);
-registerComponent('auro-anchorlink', AuroAnchorlink);
-registerComponent('auro-nav', AuroNav);
+RuntimeUtils.default.prototype.registerComponent('custom-breadcrumb', AuroBreadcrumb);
+RuntimeUtils.default.prototype.registerComponent('custom-anchorlink', AuroAnchorlink);
+RuntimeUtils.default.prototype.registerComponent('custom-nav', AuroNav);
