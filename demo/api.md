@@ -217,7 +217,7 @@ The component may be restyled using the following code sample and changing the v
   --ds-auro-anchorlink-default-marker-color: var(--ds-color-border-divider-default, #{$ds-color-border-divider-default});
   --ds-auro-anchorlink-text-color: var(--ds-color-text-tertiary-default, #{$ds-color-text-tertiary-default});
   --ds-auro-breadcrumb-chevron-color: var(--ds-color-icon-secondary-default, #{$ds-color-icon-secondary-default});
-  --ds-auro-breadcrumb-icon-color: var(--ds-color-icon-ui-default-default, #{$ds-color-icon-ui-default-default});
+  --ds-auro-breadcrumb-icon-color: var(--ds-color-icon-ui-primary-default-default, #{$ds-color-icon-ui-primary-default-default});
   --ds-auro-breadcrumb-last-link-text-color: var(--ds-color-text-tertiary-default, #{$ds-color-text-tertiary-default});
 }
 ```
