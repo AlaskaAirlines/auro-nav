@@ -60,3 +60,8 @@ export class AuroAnchorlink extends AuroHyperlink {
     });
   }
 }
+
+// default internal definition
+if (!customElements.get("auro-anchorlink")) {
+  customElements.define("auro-anchorlink", AuroAnchorlink);
+}

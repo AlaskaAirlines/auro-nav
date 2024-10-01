@@ -24,7 +24,7 @@ import tokensCss from "./tokens-css";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * The auro-nav element provides users a way to ... (it would be great if you fill this out).
+ * The auro-nav element provides a way to show users a secondary navigation aid that helps them understand the relation between the location of their current page and higher level pages.
  *
  * @attr {Boolean} activeLink - If set, defines the currently active link.
  * @attr {String} anchorNavContent - Defines the container that anchor links navigate within.
@@ -325,4 +325,9 @@ export class AuroNav extends LitElement {
       ` : undefined}
     `;
   }
+}
+
+// default internal definition
+if (!customElements.get("auro-nav")) {
+  customElements.define("auro-nav", AuroNav);
 }
