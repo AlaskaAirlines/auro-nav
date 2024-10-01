@@ -27,7 +27,7 @@
 }
 
 :host(:hover) {
-  --ds-auro-breadcrumb-icon-color: var(--ds-color-icon-ui-hover-default, #{$ds-color-icon-ui-hover-default});
+  --ds-auro-breadcrumb-icon-color: var(--ds-color-icon-ui-primary-hover-default, #{$ds-color-icon-ui-primary-hover-default});
 }
 
 // Last breadcrumb should act as a disabled breadcrumb
