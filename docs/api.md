@@ -1,29 +1,84 @@
-# auro-nav-breadcrumb
+# auro-anchorlink
+
+The auro-nav element provides users a way to ... (it would be great if you fill this out).
 
 ## Properties
 
-| Property         | Attribute        | Type      | Default | Description                                      |
-|------------------|------------------|-----------|---------|--------------------------------------------------|
-| `download`       | `download`       | `Boolean` | false   | Specifies that the target will be downloaded when a user clicks on the hyperlink. |
-| `fluid`          | `fluid`          | `Boolean` |         | Modifier for `type="cta"` fluid-width UI option. |
-| `href`           | `href`           | `String`  |         | Specifies the URL of the page link.              |
-| `ondark`         | `ondark`         | `Boolean` | false   | Specifies dark theme use of hyperlink.           |
-| `referrerpolicy` | `referrerpolicy` | `Boolean` |         | Sets `strict-origin-when-cross-origin` to send a full URL when performing a same-origin request, only sends the origin when the protocol security level stays the same (HTTPS→HTTPS), and sends no header to a less secure destination (HTTPS→HTTP). |
-| `rel`            | `rel`            | `String`  |         | Specifies the relationship between the current document and the linked document. |
-| `relative`       | `relative`       | `Boolean` | false   | Add flag to disable auto URL re-write feature.   |
-| `role`           | `role`           | `String`  |         | Use for aria roles; currently supports `button` for extended experiences. |
-| `secondary`      | `secondary`      | `Boolean` | false   | Modifier for `type="cta"` secondary UI option.   |
-| `target`         | `target`         | `String`  |         | Specifies where to open the linked document.     |
-| `type`           | `type`           | `String`  |         | Enumerable attribute; [`nav`, `cta`]             |
+| Property         | Attribute        | Modifiers | Type      | Default | Description                                      |
+|------------------|------------------|-----------|-----------|---------|--------------------------------------------------|
+| `active`         | `active`         |           | `Boolean` |         | If set, dethe link is currently the active link in the parent auro-nav. |
+| `download`       | `download`       |           | `Boolean` | false   | If true, the linked resource will be downloaded when the hyperlink is clicked. |
+| `fluid`          | `fluid`          |           | `Boolean` |         | If true and `type="cta"`, the hyperlink will have a fluid-width UI. |
+| `href`           | `href`           |           | `String`  |         | Defines the URL of the linked page.              |
+| `ondark`         | `ondark`         |           | `Boolean` | false   | If true, the hyperlink will be styled for use on a dark background. |
+| `referrerpolicy` | `referrerpolicy` |           | `Boolean` |         | If true, sets `strict-origin-when-cross-origin` to control the referrer information sent with requests. |
+| `rel`            | `rel`            |           | `String`  |         | Defines the relationship between the current document and the linked document. |
+| `relative`       | `relative`       |           | `Boolean` | false   | If true, the auto URL re-write feature will be disabled. |
+| `role`           | `role`           |           | `String`  |         | Defines ARIA roles; currently supports `button` for extended experiences. |
+| `safeUri`        |                  | readonly  | `string`  |         | Returns a safe URI based on the provided `href` and `relative` parameters.<br />If `href` is truthy, it generates a safe URL using the `safeUrl` function.<br />Otherwise, it returns an empty string. |
+| `secondary`      | `secondary`      |           | `Boolean` | false   | If true and `type="cta"`, the hyperlink will have a secondary UI. |
+| `small`          | `small`          |           | `Boolean` | false   | If true and `type="cta"`, the hyperlink will have a small UI. |
+| `target`         | `target`         |           | `String`  |         | Defines where to open the linked document.       |
+| `tertiary`       | `tertiary`       |           | `Boolean` | false   | If true and `type="cta"`, the hyperlink will have a tertiary UI. |
+| `type`           | `type`           |           | `String`  |         | Defines the type of hyperlink; accepts `nav` or `cta`. |
 
-## Methods
+## Events
 
-| Method  | Type       | Description         |
-|---------|------------|---------------------|
-| `focus` | `(): void` | Focus this element. |
+| Event                      | Type               |
+|----------------------------|--------------------|
+| `auroAnchorLink-activated` | `CustomEvent<any>` |
 
 ## CSS Shadow Parts
 
-| Part   | Description                  |
-|--------|------------------------------|
-| `link` | Apply CSS to the `a` element |
+| Part         | Description                                      |
+|--------------|--------------------------------------------------|
+| `link`       | Allows styling to be applied to the `a` element. |
+| `targetIcon` | Allows styling to be applied to the icon that appears next to the hyperlink. |
+
+
+# auro-breadcrumb
+
+## Properties
+
+| Property         | Attribute        | Modifiers | Type      | Default | Description                                      |
+|------------------|------------------|-----------|-----------|---------|--------------------------------------------------|
+| `download`       | `download`       |           | `Boolean` | false   | If true, the linked resource will be downloaded when the hyperlink is clicked. |
+| `fluid`          | `fluid`          |           | `Boolean` |         | If true and `type="cta"`, the hyperlink will have a fluid-width UI. |
+| `href`           | `href`           |           | `String`  |         | Defines the URL of the linked page.              |
+| `ondark`         | `ondark`         |           | `Boolean` | false   | If true, the hyperlink will be styled for use on a dark background. |
+| `referrerpolicy` | `referrerpolicy` |           | `Boolean` |         | If true, sets `strict-origin-when-cross-origin` to control the referrer information sent with requests. |
+| `rel`            | `rel`            |           | `String`  |         | Defines the relationship between the current document and the linked document. |
+| `relative`       | `relative`       |           | `Boolean` | false   | If true, the auto URL re-write feature will be disabled. |
+| `role`           | `role`           |           | `String`  |         | Defines ARIA roles; currently supports `button` for extended experiences. |
+| `safeUri`        |                  | readonly  | `string`  |         | Returns a safe URI based on the provided `href` and `relative` parameters.<br />If `href` is truthy, it generates a safe URL using the `safeUrl` function.<br />Otherwise, it returns an empty string. |
+| `secondary`      | `secondary`      |           | `Boolean` | false   | If true and `type="cta"`, the hyperlink will have a secondary UI. |
+| `small`          | `small`          |           | `Boolean` | false   | If true and `type="cta"`, the hyperlink will have a small UI. |
+| `target`         | `target`         |           | `String`  |         | Defines where to open the linked document.       |
+| `tertiary`       | `tertiary`       |           | `Boolean` | false   | If true and `type="cta"`, the hyperlink will have a tertiary UI. |
+| `type`           | `type`           |           | `String`  |         | Defines the type of hyperlink; accepts `nav` or `cta`. |
+
+## CSS Shadow Parts
+
+| Part         | Description                                      |
+|--------------|--------------------------------------------------|
+| `link`       | Allows styling to be applied to the `a` element. |
+| `targetIcon` | Allows styling to be applied to the icon that appears next to the hyperlink. |
+
+
+# auro-nav
+
+The auro-nav element provides a way to show users a secondary navigation aid that helps them understand the relation between the location of their current page and higher level pages.
+
+## Properties
+
+| Property           | Attribute          | Type     | Default     | Description                                      |
+|--------------------|--------------------|----------|-------------|--------------------------------------------------|
+| `anchorNavContent` | `anchorNavContent` | `String` | "undefined" | Defines the container that anchor links navigate within. |
+
+## Slots
+
+| Name                    | Description                                      |
+|-------------------------|--------------------------------------------------|
+|                         | Slot for insertion of navigation links.          |
+| `mobileToggleCollapsed` | Slot for button text in mobile when content is collapsed. |
+| `mobileToggleExpanded`  | Slot for button text in mobile when content is expanded. |

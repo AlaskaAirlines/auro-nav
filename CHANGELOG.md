@@ -1,5 +1,24 @@
 # Semantic Release Automated Changelog
 
+# [2.0.0-beta.1](https://github.com/AlaskaAirlines/auro-nav/compare/v1.3.0-beta.1...v2.0.0-beta.1) (2024-10-01)
+
+
+### Features
+
+* add tag name as attribute when custom registered ([d0a5381](https://github.com/AlaskaAirlines/auro-nav/commit/d0a53814e26718e5a2aa7231b4b8ee1bb855260e))
+
+
+### Performance Improvements
+
+* refactor custom component registration config ([1382534](https://github.com/AlaskaAirlines/auro-nav/commit/1382534fdbe75e759a7f815537a4066394ef868a))
+* remove github label colors ([38f11b5](https://github.com/AlaskaAirlines/auro-nav/commit/38f11b577d297cf410e320bcbe4c3c0a22d8c7db))
+* update dependencies ([43ec266](https://github.com/AlaskaAirlines/auro-nav/commit/43ec2668562bed1383c6adfb9b8a0762e9a9d491))
+
+
+### BREAKING CHANGES
+
+* trigger major release for color theme support #39
+
 # [1.3.0-beta.1](https://github.com/AlaskaAirlines/auro-nav/compare/v1.2.10...v1.3.0-beta.1) (2024-08-05)
 
 
