@@ -10,6 +10,8 @@ import { LitElement } from "lit";
 import { html } from 'lit/static-html.js';
 import { classMap } from 'lit/directives/class-map.js';
 
+import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
+
 import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
 
 import { AuroButton } from '@aurodesignsystem/auro-button/src/auro-button.js';
@@ -51,6 +53,11 @@ export class AuroNav extends LitElement {
      * @private
      */
     this.iconTag = versioning.generateTag('auro-icon', iconVersion, AuroIcon);
+
+    /**
+     * @private
+     */
+    this.runtimeUtils = new AuroLibraryRuntimeUtils();
 
     /**
      * @private
@@ -278,6 +285,9 @@ export class AuroNav extends LitElement {
   }
 
   firstUpdated() {
+    // Add the tag name as an attribute if it is different than the component name
+    this.runtimeUtils.handleComponentTagRename(this, 'auro-nav');
+
     this.scrollContainer = document.querySelector(this.anchorNavContent);
 
     if (this.scrollContainer) {
