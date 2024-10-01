@@ -25,3 +25,8 @@ export class AuroBreadcrumb extends AuroHyperlink {
     ];
   }
 }
+
+// default internal definition
+if (!customElements.get("auro-breadcrumb")) {
+  customElements.define("auro-breadcrumb", AuroBreadcrumb);
+}
