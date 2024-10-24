@@ -21,8 +21,8 @@ import { AuroIcon } from '@aurodesignsystem/auro-icon/src/auro-icon.js';
 import iconVersion from './iconVersion';
 
 import styleCss from "./style-css.js";
-import colorCss from "./color-css";
-import tokensCss from "./tokens-css";
+import colorCss from "./color-css.js";
+import tokensCss from "./tokens-css.js";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -95,6 +95,18 @@ export class AuroNav extends LitElement {
   }
 
   /**
+   * This will register this element with the browser.
+   * @param {string} [name="auro-nav"] - The name of element that you want to register to.
+   *
+   * @example
+   * AuroNav.register("custom-nav") // this will register this element to <custom-nav/>
+   *
+   */
+  static register(name = "auro-nav") {
+    AuroLibraryRuntimeUtils.prototype.registerComponent(name, AuroNav);
+  }
+
+  /**
    * @private
    * @returns {void} Sets the labelHidden attribute to true if there is no label slot content.
    */
@@ -122,7 +134,7 @@ export class AuroNav extends LitElement {
    * @returns {void} Inserts home and chevron-left icons for every breadcrumb.
    */
   manageBreadcrumbs() {
-    const breadcrumbs = [...this.querySelectorAll('auro-breadcrumb')];
+    const breadcrumbs = [...this.querySelectorAll('auro-breadcrumb, [auro-breadcrumb]')];
 
     if (breadcrumbs.length > 0) {
       breadcrumbs.forEach((breadcrumb) => {
@@ -138,7 +150,7 @@ export class AuroNav extends LitElement {
    * @returns {void}
    */
   manageAnchorlinks() {
-    this.anchorlinks = [...this.querySelectorAll('auro-anchorlink')];
+    this.anchorlinks = [...this.querySelectorAll('auro-anchorlink, [auro-anchorlink]')];
 
     if (this.anchorlinks.length > 0) {
       this.setAttribute('anchornav', true);
@@ -335,9 +347,4 @@ export class AuroNav extends LitElement {
       ` : undefined}
     `;
   }
-}
-
-// default internal definition
-if (!customElements.get("auro-nav")) {
-  customElements.define("auro-nav", AuroNav);
 }
