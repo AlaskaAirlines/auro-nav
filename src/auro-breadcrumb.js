@@ -11,6 +11,8 @@ import tokensCss from "./tokens-css.js";
 import styleCssAuroHyperlink from "@aurodesignsystem/auro-hyperlink/src/style-css.js";
 import colorCssAuroHyperlink from "@aurodesignsystem/auro-hyperlink/src/color-css.js";
 
+import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
+
 import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.js";
 
 // build the component class
@@ -24,9 +26,26 @@ export class AuroBreadcrumb extends AuroHyperlink {
       tokensCss
     ];
   }
-}
 
-// default internal definition
-if (!customElements.get("auro-breadcrumb")) {
-  customElements.define("auro-breadcrumb", AuroBreadcrumb);
+  /**
+   * This will register this element with the browser.
+   * @param {string} [name="auro-breadcrumb"] - The name of element that you want to register to.
+   *
+   * @example
+   * AuroBreadcrumb.register("custom-breadcrumb") // this will register this element to <custom-breadcrumb/>
+   *
+   */
+  static register(name = "auro-breadcrumb") {
+    AuroLibraryRuntimeUtils.prototype.registerComponent(name, AuroBreadcrumb);
+  }
+
+  firstUpdated() {
+    AuroLibraryRuntimeUtils.prototype.handleComponentTagRename(this, 'auro-breadcrumb');
+
+    this.addEventListener('click', (evt) => {
+      // Prevents from href from being followed (this is used for testing)
+      evt.preventDefault();
+      this.active = true;
+    });
+  }
 }
