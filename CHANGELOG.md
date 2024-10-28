@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [2.1.0](https://github.com/AlaskaAirlines/auro-nav/compare/v2.0.1...v2.1.0) (2024-10-28)
+
+
+### Features
+
+* **api:** add register static method [#51](https://github.com/AlaskaAirlines/auro-nav/issues/51), update not to omit the file extension on import line [#52](https://github.com/AlaskaAirlines/auro-nav/issues/52) ([e474bf6](https://github.com/AlaskaAirlines/auro-nav/commit/e474bf6679a372812034cdf4b6b40dd292041343))
+
+
+### Performance Improvements
+
+* update dependencies ([92de286](https://github.com/AlaskaAirlines/auro-nav/commit/92de286e4e58e3763639e8ada09a8c5a30ee7c4d))
+
 ## [2.0.1](https://github.com/AlaskaAirlines/auro-nav/compare/v2.0.0...v2.0.1) (2024-10-08)
 
 
