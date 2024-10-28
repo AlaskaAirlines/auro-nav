@@ -196,11 +196,11 @@ AuroBreadcrumb.register('custom-breadcrumb');
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/custom.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/custom.html -->
   <custom-nav>
-      <custom-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Home</custom-breadcrumb>
-      <custom-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 2</custom-breadcrumb>
-      <custom-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 3</custom-breadcrumb>
-      <custom-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 4</custom-breadcrumb>
-      <custom-breadcrumb>Current</custom-breadcrumb>
+    <custom-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Home</custom-breadcrumb>
+    <custom-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 2</custom-breadcrumb>
+    <custom-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 3</custom-breadcrumb>
+    <custom-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 4</custom-breadcrumb>
+    <custom-breadcrumb>Current</custom-breadcrumb>
   </custom-nav>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
@@ -211,11 +211,11 @@ AuroBreadcrumb.register('custom-breadcrumb');
 
 ```html
 <custom-nav>
-    <custom-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Home</custom-breadcrumb>
-    <custom-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 2</custom-breadcrumb>
-    <custom-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 3</custom-breadcrumb>
-    <custom-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 4</custom-breadcrumb>
-    <custom-breadcrumb>Current</custom-breadcrumb>
+  <custom-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Home</custom-breadcrumb>
+  <custom-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 2</custom-breadcrumb>
+  <custom-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 3</custom-breadcrumb>
+  <custom-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 4</custom-breadcrumb>
+  <custom-breadcrumb>Current</custom-breadcrumb>
 </custom-nav>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
