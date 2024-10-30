@@ -229,7 +229,6 @@ export class AuroNav extends LitElement {
   insertIcon(link, category, name, size) {
     const icon = document.createElement(this.iconTag._$litStatic$);
 
-    icon.setAttribute('customSize', true);
     icon.setAttribute('customColor', true);
 
     icon.category = category;
