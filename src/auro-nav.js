@@ -138,8 +138,8 @@ export class AuroNav extends LitElement {
 
     if (breadcrumbs.length > 0) {
       breadcrumbs.forEach((breadcrumb) => {
-        this.insertIcon(breadcrumb, 'interface', 'home-stroke', 'var(--ds-size-200)');
-        this.insertIcon(breadcrumb, 'interface', 'chevron-left', 'var(--ds-size-300)');
+        this.insertIcon(breadcrumb, 'interface', 'home-stroke', '--ds-auro-icon-size: var(--ds-size-200)');
+        this.insertIcon(breadcrumb, 'interface', 'chevron-left', '--ds-auro-icon-size: var(--ds-size-300)');
       });
     }
   }
@@ -235,11 +235,8 @@ export class AuroNav extends LitElement {
     icon.category = category;
     icon.name = name;
 
-    icon.style.width = size;
-    icon.style.height = size;
-    icon.style.lineHeight = `1.5rem`;
+    icon.style = size;
     icon.style.position = 'relative';
-    icon.style.top = '-2px';
     icon.style.marginRight = `0.25rem`;
 
     link.insertAdjacentElement('afterbegin', icon);
