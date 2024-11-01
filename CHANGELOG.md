@@ -1,5 +1,23 @@
 # Semantic Release Automated Changelog
 
+# [2.2.0](https://github.com/AlaskaAirlines/auro-nav/compare/v2.1.1...v2.2.0) (2024-11-01)
+
+
+### Bug Fixes
+
+* remove refrence to customsize attribute [#55](https://github.com/AlaskaAirlines/auro-nav/issues/55) ([9b3241d](https://github.com/AlaskaAirlines/auro-nav/commit/9b3241d6dc91979c67bd84690b1e861aff73bdc3))
+* rename function parameter size to props [#55](https://github.com/AlaskaAirlines/auro-nav/issues/55) ([ed4bbbf](https://github.com/AlaskaAirlines/auro-nav/commit/ed4bbbf885be822d89130f94a613ab8004dd7c8d))
+
+
+### Features
+
+* apply latest token ds-auro-icon-size and adjust styles applied to icon [#55](https://github.com/AlaskaAirlines/auro-nav/issues/55) ([bd566fc](https://github.com/AlaskaAirlines/auro-nav/commit/bd566fcb4a8272363896cf7c37a8146a4f446543))
+
+
+### Performance Improvements
+
+* update dependencies ([2ad7652](https://github.com/AlaskaAirlines/auro-nav/commit/2ad76528901e40c203f31614888f5d5c87518ecd))
+
 ## [2.1.1](https://github.com/AlaskaAirlines/auro-nav/compare/v2.1.0...v2.1.1) (2024-10-31)
 
 
