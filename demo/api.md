@@ -1,5 +1,5 @@
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../api.md) -->
-<!-- The below content is automatically added from ./../api.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/api.md) -->
+<!-- The below content is automatically added from ./../docs/api.md -->
 
 # auro-anchorlink
 
@@ -93,8 +93,8 @@ Example when the `auro-nav` slot is populated with `auro-nav-breadcrumb` element
 the current page the user is on. It should reflect a disabled hyperlink and the `href` attribute should **NOT** be populated.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/breadcrumb.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/breadcrumb.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/breadcrumb.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/breadcrumb.html -->
   <auro-nav>
     <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Home</auro-breadcrumb>
     <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 2</auro-breadcrumb>
@@ -106,8 +106,8 @@ the current page the user is on. It should reflect a disabled hyperlink and the 
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/breadcrumb.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/breadcrumb.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/breadcrumb.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/breadcrumb.html -->
 
 ```html
 <auro-nav>
@@ -126,8 +126,8 @@ the current page the user is on. It should reflect a disabled hyperlink and the 
 This example shows a user how set up an `auro-nav` component using `auro-anchorlinks` to efficiently jump to different points in the content.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/anchornav.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/anchornav.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/anchornav.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/anchornav.html -->
   <style>
     .anchorNavWithContentContainer {
       display: flex;
@@ -187,8 +187,8 @@ This example shows a user how set up an `auro-nav` component using `auro-anchorl
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/anchornav.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/anchornav.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/anchornav.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/anchornav.html -->
 
 ```html
 <style>
@@ -254,8 +254,8 @@ This example shows a user how set up an `auro-nav` component using `auro-anchorl
 
 The component may be restyled using the following code sample and changing the values of the following token(s).
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../src/tokens.scss) -->
-<!-- The below code snippet is automatically added from ./../../src/tokens.scss -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../src/tokens.scss) -->
+<!-- The below code snippet is automatically added from ./../src/tokens.scss -->
 
 ```scss
 /* stylelint-disable color-function-notation, number-max-precision, color-hex-length */
