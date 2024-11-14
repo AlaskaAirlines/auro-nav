@@ -1,11 +1,11 @@
 # Nav
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partial/description.md) -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/partials/description.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## About auro-nav
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partial/useCases.md) -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/partials/useCases.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## Example(s)
