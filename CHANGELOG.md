@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [2.3.0](https://github.com/AlaskaAirlines/auro-nav/compare/v2.2.0...v2.3.0) (2024-11-14)
+
+
+### Features
+
+* upgrade auro-library to 3.0.1 ([d0121ca](https://github.com/AlaskaAirlines/auro-nav/commit/d0121ca1f4a30d544f3a9790243a92414c43ae27))
+
+
+### Performance Improvements
+
+* update library to 3.0.2 ([d4cdaae](https://github.com/AlaskaAirlines/auro-nav/commit/d4cdaae69f13dcdc9ec2501b4ecff5ac04591485))
+
 # [2.2.0](https://github.com/AlaskaAirlines/auro-nav/compare/v2.1.1...v2.2.0) (2024-11-01)
 
 
