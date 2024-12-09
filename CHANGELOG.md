@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.3.1](https://github.com/AlaskaAirlines/auro-nav/compare/v2.3.0...v2.3.1) (2024-12-09)
+
+
+### Performance Improvements
+
+* add md files to package [#61](https://github.com/AlaskaAirlines/auro-nav/issues/61) ([fe7f325](https://github.com/AlaskaAirlines/auro-nav/commit/fe7f3258ffe0cbbbc793737bca17a1d15ab7b9d8))
+
 # [2.3.0](https://github.com/AlaskaAirlines/auro-nav/compare/v2.2.0...v2.3.0) (2024-11-14)
 
 
