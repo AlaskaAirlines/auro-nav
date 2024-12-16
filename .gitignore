@@ -22,3 +22,7 @@ coverage/
 
 # README that builds out docs
 docTemplates/
+
+## Added by Auro CLI migration (github-config-and-gitignore-changes)
+demo/*.md
+demo/*.min.js
