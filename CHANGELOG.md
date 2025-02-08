@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [2.3.3](https://github.com/AlaskaAirlines/auro-nav/compare/v2.3.2...v2.3.3) (2025-02-08)
+
+
+### Performance Improvements
+
+* update dependencies ([64a81a0](https://github.com/AlaskaAirlines/auro-nav/commit/64a81a089ad02a0ed609bdd0c4ce84f662417dbe))
+* update esm bundle config to address warning ([fecd308](https://github.com/AlaskaAirlines/auro-nav/commit/fecd3081f81552f7ca1f227517eebda94ffd902e))
+
 ## [2.3.2](https://github.com/AlaskaAirlines/auro-nav/compare/v2.3.1...v2.3.2) (2024-12-23)
 
 
