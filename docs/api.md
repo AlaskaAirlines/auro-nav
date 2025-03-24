@@ -1,7 +1,5 @@
 # auro-anchorlink
 
-The auro-nav element provides users a way to ... (it would be great if you fill this out).
-
 ## Properties
 
 | Property         | Attribute        | Modifiers | Type      | Default | Description                                      |
@@ -67,13 +65,12 @@ The auro-nav element provides users a way to ... (it would be great if you fill 
 
 # auro-nav
 
-The auro-nav element provides a way to show users a secondary navigation aid that helps them understand the relation between the location of their current page and higher level pages.
-
 ## Properties
 
-| Property           | Attribute          | Type     | Default     | Description                                      |
-|--------------------|--------------------|----------|-------------|--------------------------------------------------|
-| `anchorNavContent` | `anchorNavContent` | `String` | "undefined" | Defines the container that anchor links navigate within. |
+| Property           | Attribute          | Type      | Default     | Description                                      |
+|--------------------|--------------------|-----------|-------------|--------------------------------------------------|
+| `anchorNavContent` | `anchorNavContent` | `string`  | "undefined" | Defines the container that anchor links navigate within. |
+| `noHomeIcon`       | `noHomeIcon`       | `boolean` |             | If true, the home icon will not be displayed before first auro-breadcrumb. |
 
 ## Slots
 

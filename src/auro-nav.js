@@ -28,8 +28,6 @@ import tokensCss from "./tokens-css.js";
 /**
  * The auro-nav element provides a way to show users a secondary navigation aid that helps them understand the relation between the location of their current page and higher level pages.
  *
- * @attr {Boolean} activeLink - If set, defines the currently active link.
- * @attr {String} anchorNavContent - Defines the container that anchor links navigate within.
  * @slot Slot for insertion of navigation links.
  * @slot mobileToggleExpanded - Slot for button text in mobile when content is expanded.
  * @slot mobileToggleCollapsed - Slot for button text in mobile when content is collapsed.
@@ -75,13 +73,18 @@ export class AuroNav extends LitElement {
     this.mobileViewCollapsedNumLinks = 3;
   }
 
-  // This function is to define props used within the scope of this component
-  // Be sure to review  https://lit-element.polymer-project.org/guide/properties#reflected-attributes
-  // to understand how to use reflected attributes with your property settings.
   static get properties() {
     return {
       // ...super.properties,
+
+      /**
+       * If set, defines the currently active link.
+       */
       activeLink: { type: Object },
+
+      /**
+       * Defines the container that anchor links navigate within.
+       */
       anchorNavContent: { type: String },
 
       /**
