@@ -149,8 +149,7 @@ export class AuroNav extends LitElement {
 
     if (breadcrumbs.length > 0) {
       breadcrumbs.forEach((breadcrumb) => {
-        // Only insert home icon if noHomeIcon is NOT present
-        if (!this.hasAttribute('noHomeIcon')) {
+        if (!this.noHomeIcon) {
           this.insertIcon(breadcrumb, 'interface', 'home-stroke', '--ds-auro-icon-size: var(--ds-size-200)');
         }
 
