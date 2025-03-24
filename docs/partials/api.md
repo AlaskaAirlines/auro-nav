@@ -38,6 +38,26 @@ This example shows a user how set up an `auro-nav` component using `auro-anchorl
 
 </auro-accordion>
 
+### Attribute Examples
+
+#### noHomeIcon
+
+Use the `noHomeIcon` attribute to remove the home icon from the `auro-nav` component with `auro-breadcrumbs`.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/noHomeIcon.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/noHomeIcon.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
+
+
 ### Theme Support
 
 The component may be restyled using the following code sample and changing the values of the following token(s).
