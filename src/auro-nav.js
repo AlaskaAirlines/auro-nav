@@ -82,7 +82,15 @@ export class AuroNav extends LitElement {
     return {
       // ...super.properties,
       activeLink: { type: Object },
-      anchorNavContent: { type: String }
+      anchorNavContent: { type: String },
+
+      /**
+       * If true, the home icon will not be displayed before first auro-breadcrumb.
+       */
+      noHomeIcon: {
+        type: Boolean,
+        reflect: true
+      }
     };
   }
 
@@ -138,7 +146,11 @@ export class AuroNav extends LitElement {
 
     if (breadcrumbs.length > 0) {
       breadcrumbs.forEach((breadcrumb) => {
-        this.insertIcon(breadcrumb, 'interface', 'home-stroke', '--ds-auro-icon-size: var(--ds-size-200)');
+        // Only insert home icon if noHomeIcon is NOT present
+        if (!this.hasAttribute('noHomeIcon')) {
+          this.insertIcon(breadcrumb, 'interface', 'home-stroke', '--ds-auro-icon-size: var(--ds-size-200)');
+        }
+
         this.insertIcon(breadcrumb, 'interface', 'chevron-left', '--ds-auro-icon-size: var(--ds-size-300)');
       });
     }
