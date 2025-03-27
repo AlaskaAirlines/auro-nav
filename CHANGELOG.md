@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [3.1.0](https://github.com/AlaskaAirlines/auro-nav/compare/v3.0.0...v3.1.0) (2025-03-27)
+
+
+### Features
+
+* add ability to remove home icon from first breadcrumb [#68](https://github.com/AlaskaAirlines/auro-nav/issues/68) ([bfbd799](https://github.com/AlaskaAirlines/auro-nav/commit/bfbd799e88fd76537b38c1e022b7abae8f714612))
+
+
+### Performance Improvements
+
+* update dependencies and tsconfig ([9435018](https://github.com/AlaskaAirlines/auro-nav/commit/943501853545243efe36e06d941582de21a0e8e4))
+
 # [3.0.0](https://github.com/AlaskaAirlines/auro-nav/compare/v2.3.3...v3.0.0) (2025-02-28)
 
 
