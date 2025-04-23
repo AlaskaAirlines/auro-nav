@@ -6,7 +6,8 @@
 /* stylelint-disable selector-class-pattern, color-function-notation, number-leading-zero, number-max-precision, color-hex-case, color-hex-length, max-line-length, selector-max-class, max-nesting-depth, selector-max-combinators, selector-max-compound-selectors, scss/double-slash-comment-empty-line-before */
 
 // Import Auro tokens
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import "./../node_modules/@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariables";
+@import "./../node_modules/@aurodesignsystem/design-tokens/dist/alaska/SCSSVariables--alaska";
 
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';

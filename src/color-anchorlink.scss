@@ -3,32 +3,42 @@
 
 // ---------------------------------------------------------------------
 
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import "./../node_modules/@aurodesignsystem/design-tokens/dist/alaska/SCSSVariables--alaska";
 
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
+
+/* stylelint-disable */
 
 :host {
   border-color: var(--ds-auro-anchorlink-border-color);
   border-left-color: var(--ds-auro-anchorlink-default-marker-color);
 
+  --ds-auro-hyperlink-default-color-default: var(--ds-auro-anchorlink-text-color);
+
   a {
-    color: var(--ds-auro-anchorlink-text-color);
+    &:focus-visible {
+      --ds-auro-hyperlink-focus-color-default: var(--ds-basic-color-texticon-default, #{$ds-basic-color-texticon-default});
+    }
   }
 }
 
-:host([active]),
+:host([active]) {
+  --ds-auro-hyperlink-default-color-default: var(--ds-basic-color-texticon-default, #{$ds-basic-color-texticon-default}) !important;
+  --ds-auro-anchorlink-text-color: var(--ds-basic-color-texticon-default, #{$ds-basic-color-texticon-default});
+}
+
 :host(:hover) {
-  --ds-auro-anchorlink-text-color: var(--ds-color-text-primary-default, #{$ds-color-text-primary-default});
+  --ds-auro-hyperlink-hover-color-default: var(--ds-auro-anchorlink-text-hover-color);
 }
 
 :host(:focus) {
-  --ds-auro-anchorlink-border-color: var(--ds-color-border-ui-focus-default, #{$ds-color-border-ui-focus-default});
-  --ds-auro-anchorlink-default-marker-color: var(--ds-color-border-ui-focus-default, #{$ds-color-border-ui-focus-default});
+  --ds-auro-anchorlink-border-color: var(--ds-advanced-color-state-focused, #{$ds-advanced-color-state-focused});
+  --ds-auro-anchorlink-default-marker-color: var(--ds-advanced-color-state-focused, #{$ds-advanced-color-state-focused});
 }
 
 :host(:focus:hover) {
-  --ds-auro-anchorlink-text-color: var(--ds-color-text-primary-default, #{$ds-color-text-primary-default});
+  --ds-auro-hyperlink-hover-color-default: var(--ds-auro-anchorlink-text-hover-color);
 }
 
 
