@@ -167,6 +167,8 @@ export class AuroNav extends LitElement {
     this.anchorlinks = [...this.querySelectorAll('auro-anchorlink, [auro-anchorlink]')];
 
     if (this.anchorlinks.length > 0) {
+      // Set the first anchor link as active by default
+      this.anchorlinks[0].setAttribute('active', true);
       this.setAttribute('anchornav', true);
       this.requestUpdate();
 

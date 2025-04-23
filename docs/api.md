@@ -4,7 +4,7 @@
 
 | Property         | Attribute        | Modifiers | Type      | Default | Description                                      |
 |------------------|------------------|-----------|-----------|---------|--------------------------------------------------|
-| `active`         | `active`         |           | `Boolean` |         | If set, dethe link is currently the active link in the parent auro-nav. |
+| `active`         | `active`         |           | `Boolean` |         | If set, the link is currently the active link in the parent auro-nav. |
 | `download`       | `download`       |           | `Boolean` | false   | If true, the linked resource will be downloaded when the hyperlink is clicked. |
 | `fluid`          | `fluid`          |           | `Boolean` |         | If true and `type="cta"`, the hyperlink will have a fluid-width UI. |
 | `href`           | `href`           |           | `String`  |         | Defines the URL of the linked page.              |

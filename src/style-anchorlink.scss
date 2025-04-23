@@ -5,7 +5,8 @@
 
 /* stylelint-disable declaration-empty-line-before, declaration-no-important, order/properties-order, max-line-length, scss/double-slash-comment-empty-line-before */
 
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import "./../node_modules/@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariables";
+@import "./../node_modules/@aurodesignsystem/design-tokens/dist/alaska/SCSSVariables--alaska";
 
 // Import Auro tokens
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';

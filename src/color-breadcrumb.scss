@@ -3,12 +3,16 @@
 
 // ---------------------------------------------------------------------
 
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import "./../node_modules/@aurodesignsystem/design-tokens/dist/alaska/SCSSVariables--alaska";
 
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
 
 :host {
+  --ds-auro-hyperlink-visited-color-default: var(--ds-advanced-color-hyperlink-text, #{$ds-advanced-color-hyperlink-text});
+  --ds-auro-hyperlink-focus-color-default: var(--ds-advanced-color-hyperlink-text, #{$ds-advanced-color-hyperlink-text});
+  --ds-auro-hyperlink-hover-color-default: var(--ds-advanced-color-hyperlink-text-hover, #{$ds-advanced-color-hyperlink-text-hover});
+
   // Color of the right chevron icon after each breadcrumb
   &:after {
     background-color: var(--ds-auro-breadcrumb-chevron-color);
@@ -18,16 +22,10 @@
   ::slotted([auro-icon][name='chevron-left']) {
     color: var(--ds-auro-breadcrumb-icon-color);
   }
-
-  a {
-    --ds-auro-hyperlink-visited-color-default: var(--ds-color-text-ui-default-default, #{$ds-color-text-ui-default-default});
-    --ds-auro-hyperlink-focus-color-default: var(--ds-color-text-ui-default-default, #{$ds-color-text-ui-default-default});
-    --ds-auro-hyperlink-hover-color-default: var(--ds-color-text-ui-hover-default, #{$ds-color-text-ui-hover-default});
-  }
 }
 
 :host(:hover) {
-  --ds-auro-breadcrumb-icon-color: var(--ds-color-icon-ui-primary-hover-default, #{$ds-color-icon-ui-primary-hover-default});
+  --ds-auro-breadcrumb-icon-color: var(--ds-advanced-color-hyperlink-text-hover, #{$ds-advanced-color-hyperlink-text-hover});
 }
 
 // Last breadcrumb should act as a disabled breadcrumb
