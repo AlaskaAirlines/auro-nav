@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [3.2.0](https://github.com/AlaskaAirlines/auro-nav/compare/v3.1.0...v3.2.0) (2025-04-29)
+
+
+### Features
+
+* update to use new color theme tokens [#74](https://github.com/AlaskaAirlines/auro-nav/issues/74) ([9f0bb44](https://github.com/AlaskaAirlines/auro-nav/commit/9f0bb44b0eee2a33edb40b0423c32f55daafbb95))
+
 # [3.1.0](https://github.com/AlaskaAirlines/auro-nav/compare/v3.0.0...v3.1.0) (2025-03-27)
 
 
