@@ -3,9 +3,9 @@
 
 // ---------------------------------------------------------------------
 
-import styleAnchorlinkCss from "./style-anchorlink-css.js";
-import colorAnchorlinkCss from "./color-anchorlink-css.js";
-import tokensCss from "./tokens-css.js";
+import styleAnchorlinkCss from "./styles/style-anchorlink-css.js";
+import colorAnchorlinkCss from "./styles/color-anchorlink-css.js";
+import tokensCss from "./styles/tokens-css.js";
 
 import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
 

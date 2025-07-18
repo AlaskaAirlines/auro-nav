@@ -4,9 +4,9 @@
 // ---------------------------------------------------------------------
 
 // Import touch detection lib
-import styleBreadcrumbCss from "./style-breadcrumb-css.js";
-import colorBreadcrumbCss from "./color-breadcrumb-css.js";
-import tokensCss from "./tokens-css.js";
+import styleBreadcrumbCss from "./styles/style-breadcrumb-css.js";
+import colorBreadcrumbCss from "./styles/color-breadcrumb-css.js";
+import tokensCss from "./styles/tokens-css.js";
 
 import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
 

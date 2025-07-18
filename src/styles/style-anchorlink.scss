@@ -5,12 +5,8 @@
 
 /* stylelint-disable declaration-empty-line-before, declaration-no-important, order/properties-order, max-line-length, scss/double-slash-comment-empty-line-before */
 
-@import "./../node_modules/@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariables";
-@import "./../node_modules/@aurodesignsystem/design-tokens/dist/alaska/SCSSVariables--alaska";
-
-// Import Auro tokens
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
+@use "@aurodesignsystem/design-tokens/dist/legacy/auro-classic/SCSSVariables" as vac;
+@use "@aurodesignsystem/design-tokens/dist/themes/alaska/SCSSVariables--alaska" as v;
 
 :host {
   display: block;
@@ -22,11 +18,9 @@
     display: block;
     text-decoration: none;
 
-    font-size: var(--ds-text-body-size-sm, $ds-text-body-size-sm);
-
     width: 100%;
 
-    padding: var(--ds-size-100, $ds-size-100) var(--ds-size-200, $ds-size-200) var(--ds-size-100, $ds-size-100) var(--ds-size-200, $ds-size-200);
+    padding: var(--ds-size-100, vac.$ds-size-100) var(--ds-size-200, vac.$ds-size-200) var(--ds-size-100, vac.$ds-size-100) var(--ds-size-200, vac.$ds-size-200);
 
     &:focus {
       outline: unset;
