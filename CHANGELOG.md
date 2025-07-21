@@ -1,5 +1,14 @@
 # Semantic Release Automated Changelog
 
+## [3.2.1](https://github.com/AlaskaAirlines/auro-nav/compare/v3.2.0...v3.2.1) (2025-07-21)
+
+
+### Bug Fixes
+
+* add new small prop to example ([517f074](https://github.com/AlaskaAirlines/auro-nav/commit/517f074993687b129aaaa643af4aa26241438ebf))
+* add themeable type classes ([4941125](https://github.com/AlaskaAirlines/auro-nav/commit/4941125c99cb4798a80770ca0cb1bf40cd44f72b))
+* update docs head content ([cbb4734](https://github.com/AlaskaAirlines/auro-nav/commit/cbb47348805761eb44c397385d7d59435e589663))
+
 # [3.2.0](https://github.com/AlaskaAirlines/auro-nav/compare/v3.1.0...v3.2.0) (2025-04-29)
 
 
