@@ -41,7 +41,9 @@ export class AuroBreadcrumb extends AuroHyperlink {
 
     this.addEventListener('click', (evt) => {
       // Prevents from href from being followed (this is used for testing)
-      evt.preventDefault();
+      if (evt.currentTarget.href && evt.currentTarget.href.startsWith("#")) {
+        evt.preventDefault();
+      }
       this.active = true;
     });
   }
