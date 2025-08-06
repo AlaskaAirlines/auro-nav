@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.2.2](https://github.com/AlaskaAirlines/auro-nav/compare/v3.2.1...v3.2.2) (2025-08-06)
+
+
+### Bug Fixes
+
+* add conditional to prevent default in breadcrumb and anchorlink ([42b4e64](https://github.com/AlaskaAirlines/auro-nav/commit/42b4e64cee221ecdf40b2c04cf37cf84f59b8d44))
+
 ## [3.2.1](https://github.com/AlaskaAirlines/auro-nav/compare/v3.2.0...v3.2.1) (2025-07-21)
 
 
