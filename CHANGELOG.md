@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.2.3](https://github.com/AlaskaAirlines/auro-nav/compare/v3.2.2...v3.2.3) (2025-09-04)
+
+
+### Performance Improvements
+
+* update button for icon fix and all other auro dependencies [#79](https://github.com/AlaskaAirlines/auro-nav/issues/79) ([33226cd](https://github.com/AlaskaAirlines/auro-nav/commit/33226cd795cc993096853372f4e5525bdd3bd0e6))
+
 ## [3.2.2](https://github.com/AlaskaAirlines/auro-nav/compare/v3.2.1...v3.2.2) (2025-08-06)
 
 
