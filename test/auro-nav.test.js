@@ -1,5 +1,5 @@
 import { elementUpdated, expect, fixture, html } from "@open-wc/testing";
-import "../index.js";
+import "../src/registered";
 
 describe("auro-nav", () => {
   it("auro-nav is accessible", async () => {

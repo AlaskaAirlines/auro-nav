@@ -1,6 +1,4 @@
-import { AuroAnchorlink } from "../src/auro-anchorlink.js";
-import { AuroBreadcrumb } from "../src/auro-breadcrumb.js";
-import { AuroNav } from "../src/auro-nav.js";
+import { AuroAnchorlink, AuroBreadcrumb, AuroNav } from "../src/index";
 
 AuroBreadcrumb.register();
 AuroBreadcrumb.register("custom-breadcrumb");
