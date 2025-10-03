@@ -1,4 +1,4 @@
-import { AuroAnchorlink } from '../../src/auro-anchorlink.js';
+import { AuroAnchorlink } from "../../src/auro-anchorlink.js";
 
 /**
  * @private

@@ -1,4 +1,4 @@
-import { AuroNav } from '../../src/auro-nav.js';
+import { AuroNav } from "../../src/auro-nav.js";
 
 /**
  * @private
