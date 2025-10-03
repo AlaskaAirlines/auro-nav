@@ -5,10 +5,9 @@
 
 import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.js";
 import AuroLibraryRuntimeUtils from "@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs";
-import colorBreadcrumbCss from "./styles/color-breadcrumb-css.js";
-// Import touch detection lib
-import styleBreadcrumbCss from "./styles/style-breadcrumb-css.js";
-import tokensCss from "./styles/tokens-css.js";
+import colorBreadcrumbCss from "./styles/color-breadcrumb.scss";
+import styleBreadcrumbCss from "./styles/style-breadcrumb.scss";
+import tokensCss from "./styles/tokens.scss";
 
 // build the component class
 export class AuroBreadcrumb extends AuroHyperlink {

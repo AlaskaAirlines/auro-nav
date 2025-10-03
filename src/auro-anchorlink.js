@@ -5,9 +5,9 @@
 
 import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.js";
 import AuroLibraryRuntimeUtils from "@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs";
-import colorAnchorlinkCss from "./styles/color-anchorlink-css.js";
-import styleAnchorlinkCss from "./styles/style-anchorlink-css.js";
-import tokensCss from "./styles/tokens-css.js";
+import colorAnchorlinkCss from "./styles/color-anchorlink.scss";
+import styleAnchorlinkCss from "./styles/style-anchorlink.scss";
+import tokensCss from "./styles/tokens.scss";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
