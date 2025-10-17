@@ -26,3 +26,5 @@ docTemplates/
 ## Added by Auro CLI migration (github-config-and-gitignore-changes)
 demo/*.md
 demo/*.min.js
+
+custom-elements.json
