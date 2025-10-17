@@ -3,7 +3,7 @@
 
 // ---------------------------------------------------------------------
 
-import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.js";
+import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/class";
 import AuroLibraryRuntimeUtils from "@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs";
 import colorAnchorlinkCss from "./styles/color-anchorlink.scss";
 import styleAnchorlinkCss from "./styles/style-anchorlink.scss";
@@ -13,14 +13,17 @@ import tokensCss from "./styles/tokens.scss";
 /**
  * The auro-nav element provides users a way to ... (it would be great if you fill this out).
  *
- * @attr {Boolean} active - If set, the link is currently the active link in the parent auro-nav.
  */
 
 // build the component class
 export class AuroAnchorlink extends AuroHyperlink {
   static get properties() {
     return {
-      ...AuroHyperlink.properties,
+      ...super.properties,
+
+      /**
+       * If set, the link is currently the active link in the parent auro-nav.
+       */
       active: {
         type: Boolean,
         reflect: true,
