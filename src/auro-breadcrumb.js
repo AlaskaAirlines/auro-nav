@@ -3,25 +3,17 @@
 
 // ---------------------------------------------------------------------
 
-// Import touch detection lib
-import styleBreadcrumbCss from "./styles/style-breadcrumb-css.js";
-import colorBreadcrumbCss from "./styles/color-breadcrumb-css.js";
-import tokensCss from "./styles/tokens-css.js";
-
-import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
-
-import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.js";
+import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/class";
+import AuroLibraryRuntimeUtils from "@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs";
+import colorBreadcrumbCss from "./styles/color-breadcrumb.scss";
+import styleBreadcrumbCss from "./styles/style-breadcrumb.scss";
+import tokensCss from "./styles/tokens.scss";
 
 // build the component class
 export class AuroBreadcrumb extends AuroHyperlink {
   static get styles() {
-    const styles = super.styles;
-    return [
-      ...styles,
-      styleBreadcrumbCss,
-      colorBreadcrumbCss,
-      tokensCss
-    ];
+    const styles = AuroHyperlink.styles;
+    return [...styles, styleBreadcrumbCss, colorBreadcrumbCss, tokensCss];
   }
 
   /**
@@ -37,11 +29,14 @@ export class AuroBreadcrumb extends AuroHyperlink {
   }
 
   firstUpdated() {
-    AuroLibraryRuntimeUtils.prototype.handleComponentTagRename(this, 'auro-breadcrumb');
+    AuroLibraryRuntimeUtils.prototype.handleComponentTagRename(
+      this,
+      "auro-breadcrumb",
+    );
 
-    this.addEventListener('click', (evt) => {
+    this.addEventListener("click", (evt) => {
       // Prevents from href from being followed (this is used for testing)
-      if (evt.currentTarget.href && evt.currentTarget.href.startsWith("#")) {
+      if (evt.currentTarget.href?.startsWith("#")) {
         evt.preventDefault();
       }
       this.active = true;

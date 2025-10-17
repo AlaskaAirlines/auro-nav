@@ -5,24 +5,20 @@
 
 /* eslint-disable max-params, max-lines, no-underscore-dangle, lit/binding-positions, lit/no-invalid-html */
 
+import { AuroButton } from "@aurodesignsystem/auro-button/class";
+import { AuroIcon } from "@aurodesignsystem/auro-icon/class";
+import { AuroDependencyVersioning } from "@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs";
+
+import AuroLibraryRuntimeUtils from "@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs";
 // If using litElement base class
 import { LitElement } from "lit";
-import { html } from 'lit/static-html.js';
-import { classMap } from 'lit/directives/class-map.js';
-
-import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
-
-import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
-
-import { AuroButton } from '@aurodesignsystem/auro-button/src/auro-button.js';
-import buttonVersion from './buttonVersion.js';
-
-import { AuroIcon } from '@aurodesignsystem/auro-icon/src/auro-icon.js';
-import iconVersion from './iconVersion.js';
-
-import styleCss from "./styles/style-css.js";
-import colorCss from "./styles/color-css.js";
-import tokensCss from "./styles/tokens-css.js";
+import { classMap } from "lit/directives/class-map.js";
+import { html } from "lit/static-html.js";
+import buttonVersion from "./buttonVersion.js";
+import iconVersion from "./iconVersion.js";
+import colorCss from "./styles/color.scss";
+import styleCss from "./styles/style.scss";
+import tokensCss from "./styles/tokens.scss";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -45,12 +41,16 @@ export class AuroNav extends LitElement {
     /**
      * @private
      */
-    this.buttonTag = versioning.generateTag('auro-button', buttonVersion, AuroButton);
+    this.buttonTag = versioning.generateTag(
+      "auro-button",
+      buttonVersion,
+      AuroButton,
+    );
 
     /**
      * @private
      */
-    this.iconTag = versioning.generateTag('auro-icon', iconVersion, AuroIcon);
+    this.iconTag = versioning.generateTag("auro-icon", iconVersion, AuroIcon);
 
     /**
      * @private
@@ -92,17 +92,13 @@ export class AuroNav extends LitElement {
        */
       noHomeIcon: {
         type: Boolean,
-        reflect: true
-      }
+        reflect: true,
+      },
     };
   }
 
   static get styles() {
-    return [
-      styleCss,
-      colorCss,
-      tokensCss
-    ];
+    return [styleCss, colorCss, tokensCss];
   }
 
   /**
@@ -122,7 +118,7 @@ export class AuroNav extends LitElement {
    * @returns {void} Sets the labelHidden attribute to true if there is no label slot content.
    */
   handleLabelSlot() {
-    const slot = this.shadowRoot.querySelector('#label');
+    const slot = this.shadowRoot.querySelector("#label");
 
     this.labelHidden = true;
 
@@ -145,15 +141,27 @@ export class AuroNav extends LitElement {
    * @returns {void} Inserts home and chevron-left icons for every breadcrumb.
    */
   manageBreadcrumbs() {
-    const breadcrumbs = [...this.querySelectorAll('auro-breadcrumb, [auro-breadcrumb]')];
+    const breadcrumbs = [
+      ...this.querySelectorAll("auro-breadcrumb, [auro-breadcrumb]"),
+    ];
 
     if (breadcrumbs.length > 0) {
       breadcrumbs.forEach((breadcrumb) => {
         if (!this.noHomeIcon) {
-          this.insertIcon(breadcrumb, 'interface', 'home-stroke', '--ds-auro-icon-size: var(--ds-size-200)');
+          this.insertIcon(
+            breadcrumb,
+            "interface",
+            "home-stroke",
+            "--ds-auro-icon-size: var(--ds-size-200)",
+          );
         }
 
-        this.insertIcon(breadcrumb, 'interface', 'chevron-left', '--ds-auro-icon-size: var(--ds-size-300)');
+        this.insertIcon(
+          breadcrumb,
+          "interface",
+          "chevron-left",
+          "--ds-auro-icon-size: var(--ds-size-300)",
+        );
       });
     }
   }
@@ -164,12 +172,14 @@ export class AuroNav extends LitElement {
    * @returns {void}
    */
   manageAnchorlinks() {
-    this.anchorlinks = [...this.querySelectorAll('auro-anchorlink, [auro-anchorlink]')];
+    this.anchorlinks = [
+      ...this.querySelectorAll("auro-anchorlink, [auro-anchorlink]"),
+    ];
 
     if (this.anchorlinks.length > 0) {
       // Set the first anchor link as active by default
-      this.anchorlinks[0].setAttribute('active', true);
-      this.setAttribute('anchornav', true);
+      this.anchorlinks[0].setAttribute("active", true);
+      this.setAttribute("anchornav", true);
       this.requestUpdate();
 
       this.anchorlinks.forEach((link) => {
@@ -177,13 +187,13 @@ export class AuroNav extends LitElement {
           this.activeLink = link;
         }
 
-        link.addEventListener('auroAnchorLink-activated', (evt) => {
+        link.addEventListener("auroAnchorLink-activated", (evt) => {
           if (this.activeLink !== evt.target) {
             this.activeLink = evt.target;
           }
         });
 
-        link.addEventListener('click', (evt) => {
+        link.addEventListener("click", (evt) => {
           if (this.scrollContainer && this.activeLink) {
             const targetContent = document.querySelector(evt.target.href);
 
@@ -204,10 +214,10 @@ export class AuroNav extends LitElement {
    * @returns {void}
    */
   toggleAnchorLinks() {
-    if (!this.hasAttribute('aria-expanded')) {
-      this.setAttribute('aria-expanded', true);
+    if (!this.hasAttribute("aria-expanded")) {
+      this.setAttribute("aria-expanded", true);
     } else {
-      this.removeAttribute('aria-expanded');
+      this.removeAttribute("aria-expanded");
     }
 
     this.handleAnchorNavAnimation();
@@ -219,17 +229,17 @@ export class AuroNav extends LitElement {
    * @returns {void}
    */
   handleAnchorNavAnimation() {
-    const marker = this.shadowRoot.querySelector('#anchorMarker');
+    const marker = this.shadowRoot.querySelector("#anchorMarker");
 
     if (marker) {
       if (this.activeLink) {
-        marker.style.display = 'block';
+        marker.style.display = "block";
         marker.style.height = `${this.activeLink.offsetHeight}px`;
         marker.style.top = `${this.activeLink.offsetTop}px`;
       } else {
-        marker.style.display = 'none';
-        marker.style.height = 'unset';
-        marker.style.top = 'unset';
+        marker.style.display = "none";
+        marker.style.height = "unset";
+        marker.style.top = "unset";
       }
     }
   }
@@ -245,16 +255,16 @@ export class AuroNav extends LitElement {
   insertIcon(link, category, name, props) {
     const icon = document.createElement(this.iconTag._$litStatic$);
 
-    icon.setAttribute('customColor', true);
+    icon.setAttribute("customColor", true);
 
     icon.category = category;
     icon.name = name;
 
     icon.style = props;
-    icon.style.position = 'relative';
-    icon.style.marginRight = `0.25rem`;
+    icon.style.position = "relative";
+    icon.style.marginRight = "0.25rem";
 
-    link.insertAdjacentElement('afterbegin', icon);
+    link.insertAdjacentElement("afterbegin", icon);
   }
 
   /**
@@ -266,7 +276,9 @@ export class AuroNav extends LitElement {
     let lastInView; /* eslint-disable-line init-declarations */
 
     this.anchorlinks.forEach((anchorLink) => {
-      const target = this.scrollContainer.querySelector(anchorLink.getAttribute('href'));
+      const target = this.scrollContainer.querySelector(
+        anchorLink.getAttribute("href"),
+      );
 
       if (target) {
         if (this.isScrolledIntoView(target)) {
@@ -287,7 +299,8 @@ export class AuroNav extends LitElement {
    * @returns {Boolean} If true, the element passed in is visible.
    */
   isScrolledIntoView(elem) {
-    const containerViewBottom = this.scrollContainer.scrollTop + this.scrollContainer.offsetHeight;
+    const containerViewBottom =
+      this.scrollContainer.scrollTop + this.scrollContainer.offsetHeight;
     const elementInViewPos = elem.offsetTop + elem.offsetHeight;
     const inView = containerViewBottom >= elementInViewPos;
 
@@ -295,11 +308,11 @@ export class AuroNav extends LitElement {
   }
 
   updated(changedProperties) {
-    if (changedProperties.has('activeLink')) {
-      if (this.hasAttribute('anchornav')) {
+    if (changedProperties.has("activeLink")) {
+      if (this.hasAttribute("anchornav")) {
         this.anchorlinks.forEach((anchorlink) => {
           if (this.activeLink !== anchorlink) {
-            anchorlink.removeAttribute('active');
+            anchorlink.removeAttribute("active");
           }
         });
 
@@ -310,22 +323,22 @@ export class AuroNav extends LitElement {
 
   firstUpdated() {
     // Add the tag name as an attribute if it is different than the component name
-    this.runtimeUtils.handleComponentTagRename(this, 'auro-nav');
+    this.runtimeUtils.handleComponentTagRename(this, "auro-nav");
 
     this.scrollContainer = document.querySelector(this.anchorNavContent);
 
     if (this.scrollContainer) {
-      this.scrollContainer.addEventListener('scroll', () => {
+      this.scrollContainer.addEventListener("scroll", () => {
         this.assessActiveAnchorLink();
       });
     }
 
-    window.addEventListener('resize', () => {
-      const marker = this.shadowRoot.querySelector('#anchorMarker');
+    window.addEventListener("resize", () => {
+      const marker = this.shadowRoot.querySelector("#anchorMarker");
       if (marker) {
-        marker.setAttribute('resizing', true);
+        marker.setAttribute("resizing", true);
         this.handleAnchorNavAnimation();
-        marker.removeAttribute('resizing');
+        marker.removeAttribute("resizing");
       }
     });
   }
@@ -333,8 +346,8 @@ export class AuroNav extends LitElement {
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     const labelClasses = {
-      'hidden': this.labelHidden,
-      'label-container': true
+      hidden: this.labelHidden,
+      "label-container": true,
     };
 
     return html`
@@ -344,7 +357,10 @@ export class AuroNav extends LitElement {
         </div>
         <slot @slotchange="${this.handleSlotItems}"></slot>
       </div>
-      ${this.anchorlinks && this.anchorlinks.length > this.mobileViewCollapsedNumLinks ? html`
+      ${
+        this.anchorlinks &&
+        this.anchorlinks.length > this.mobileViewCollapsedNumLinks
+          ? html`
         <${this.buttonTag} slim tertiary class="showHideBtn" @click=${this.toggleAnchorLinks}>
           <span more>
             <slot name="mobileToggleExpanded"></slot>
@@ -353,10 +369,16 @@ export class AuroNav extends LitElement {
             <slot name="mobileToggleCollapsed"></slot>
           </span>
         </${this.buttonTag}>
-      ` : undefined}
-      ${this.anchorlinks ? html`
+      `
+          : undefined
+      }
+      ${
+        this.anchorlinks
+          ? html`
         <div id="anchorMarker" class="anchorMarker"></div>
-      ` : undefined}
+      `
+          : undefined
+      }
     `;
   }
 }

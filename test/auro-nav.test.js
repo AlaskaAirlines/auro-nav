@@ -1,8 +1,8 @@
-import { fixture, html, expect, elementUpdated } from '@open-wc/testing';
-import '../index.js';
+import { elementUpdated, expect, fixture, html } from "@open-wc/testing";
+import "../src/registered";
 
-describe('auro-nav', () => {
-  it('auro-nav is accessible', async () => {
+describe("auro-nav", () => {
+  it("auro-nav is accessible", async () => {
     const el = await fixture(html`
       <auro-nav cssclass="testClass"></auro-nav>
     `);
@@ -10,63 +10,63 @@ describe('auro-nav', () => {
     await expect(el).to.be.accessible();
   });
 
-  it('auro-nav custom element is defined using breadcrumb links', async () => {
+  it("auro-nav custom element is defined using breadcrumb links", async () => {
     const el = await !!customElements.get("auro-nav");
 
     await expect(el).to.be.true;
   });
 
-  it('breadcrumb icons are present on component', async () => {
+  it("breadcrumb icons are present on component", async () => {
     const el = await defaultBreadcrumbFixture();
 
     el.manageBreadcrumbs();
 
-    const firstChild = el.querySelector(':first-child');
+    const firstChild = el.querySelector(":first-child");
 
-    const chevronLeftIcon = firstChild.querySelector(':first-child');
-    const homeIcon = firstChild.querySelector(':nth-child(2)');
+    const chevronLeftIcon = firstChild.querySelector(":first-child");
+    const homeIcon = firstChild.querySelector(":nth-child(2)");
 
-    await expect(chevronLeftIcon.name).to.equal('chevron-left');
-    await expect(homeIcon.name).to.equal('home-stroke');
+    await expect(chevronLeftIcon.name).to.equal("chevron-left");
+    await expect(homeIcon.name).to.equal("home-stroke");
   });
 
-  it('anchorlink represents the selected option when clicked', async () => {
+  it("anchorlink represents the selected option when clicked", async () => {
     const el = await defaultAnchornavFixture();
 
     await elementUpdated(el);
 
-    const firstLink = [...el.querySelectorAll('auro-anchorlink')][0];
+    const firstLink = [...el.querySelectorAll("auro-anchorlink")][0];
 
     firstLink.click();
 
     await elementUpdated(el);
 
-    await expect(firstLink.hasAttribute('active')).to.be.true;
+    await expect(firstLink.hasAttribute("active")).to.be.true;
   });
 
-  it('clicking button expands and hides nav in mobile version', async () => {
+  it("clicking button expands and hides nav in mobile version", async () => {
     const el = await defaultAnchornavFixture();
-    const nav = el.querySelector('auro-nav');
+    const nav = el.querySelector("auro-nav");
 
     window.innerWidth = 600;
 
     await elementUpdated(el);
 
-    await expect(nav.hasAttribute('aria-expanded')).to.be.false;
+    await expect(nav.hasAttribute("aria-expanded")).to.be.false;
 
-    const button = nav.shadowRoot.querySelector('.showHideBtn');
-
-    button.click();
-
-    await elementUpdated(el);
-
-    await expect(nav.hasAttribute('aria-expanded')).to.be.true;
+    const button = nav.shadowRoot.querySelector(".showHideBtn");
 
     button.click();
 
     await elementUpdated(el);
 
-    await expect(el.hasAttribute('aria-expanded')).to.be.false;
+    await expect(nav.hasAttribute("aria-expanded")).to.be.true;
+
+    button.click();
+
+    await elementUpdated(el);
+
+    await expect(el.hasAttribute("aria-expanded")).to.be.false;
   });
 });
 

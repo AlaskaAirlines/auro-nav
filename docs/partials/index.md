@@ -52,8 +52,7 @@ There are two important parts of every Auro component. The <a href="https://deve
 To protect from versioning conflicts with other instances of the component being loaded, it is recommended to use our `AuroNav.register(name)` method and pass in a unique name.
 
 ```js
-import { AuroNav } from '@aurodesignsystem/auro-nav/src/auro-nav.js';
-import { AuroBreadcrumb } from '@aurodesignsystem/auro-nav/src/auro-breadcrumb.js';
+import { AuroNav, AuroBreadcrumb } from '@aurodesignsystem/auro-nav/class';
 
 AuroNav.register('custom-nav');
 AuroBreadcrumb.register('custom-breadcrumb');

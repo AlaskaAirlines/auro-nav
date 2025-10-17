@@ -1,4 +1,4 @@
-import { AuroBreadcrumb } from '../../src/auro-breadcrumb.js';
+import { AuroBreadcrumb } from "../../src/auro-breadcrumb.js";
 
 /**
  * @private

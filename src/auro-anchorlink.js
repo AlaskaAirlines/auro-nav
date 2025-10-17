@@ -3,19 +3,16 @@
 
 // ---------------------------------------------------------------------
 
-import styleAnchorlinkCss from "./styles/style-anchorlink-css.js";
-import colorAnchorlinkCss from "./styles/color-anchorlink-css.js";
-import tokensCss from "./styles/tokens-css.js";
-
-import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
-
-import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.js";
+import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/class";
+import AuroLibraryRuntimeUtils from "@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs";
+import colorAnchorlinkCss from "./styles/color-anchorlink.scss";
+import styleAnchorlinkCss from "./styles/style-anchorlink.scss";
+import tokensCss from "./styles/tokens.scss";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
  * The auro-nav element provides users a way to ... (it would be great if you fill this out).
  *
- * @attr {Boolean} active - If set, the link is currently the active link in the parent auro-nav.
  */
 
 // build the component class
@@ -23,21 +20,20 @@ export class AuroAnchorlink extends AuroHyperlink {
   static get properties() {
     return {
       ...super.properties,
+
+      /**
+       * If set, the link is currently the active link in the parent auro-nav.
+       */
       active: {
         type: Boolean,
-        reflect: true
-      }
+        reflect: true,
+      },
     };
   }
 
   static get styles() {
-    const styles = super.styles;
-    return [
-      ...styles,
-      styleAnchorlinkCss,
-      colorAnchorlinkCss,
-      tokensCss
-    ];
+    const styles = AuroHyperlink.styles;
+    return [...styles, styleAnchorlinkCss, colorAnchorlinkCss, tokensCss];
   }
 
   /**
@@ -53,22 +49,27 @@ export class AuroAnchorlink extends AuroHyperlink {
   }
 
   updated(changedProperties) {
-    if (changedProperties.has('active')) {
+    if (changedProperties.has("active")) {
       if (this.active) {
-        this.dispatchEvent(new CustomEvent('auroAnchorLink-activated', {
-          bubbles: true,
-          composed: true
-        }));
+        this.dispatchEvent(
+          new CustomEvent("auroAnchorLink-activated", {
+            bubbles: true,
+            composed: true,
+          }),
+        );
       }
     }
   }
 
   firstUpdated() {
-    AuroLibraryRuntimeUtils.prototype.handleComponentTagRename(this, 'auro-anchorlink');
+    AuroLibraryRuntimeUtils.prototype.handleComponentTagRename(
+      this,
+      "auro-anchorlink",
+    );
 
-    this.addEventListener('click', (evt) => {
+    this.addEventListener("click", (evt) => {
       // Prevents from href from being followed (this is used for testing)
-      if (evt.currentTarget.href && evt.currentTarget.href.startsWith("#")) {
+      if (evt.currentTarget.href?.startsWith("#")) {
         evt.preventDefault();
       }
       this.active = true;
