@@ -12,9 +12,14 @@
 /* stylelint-disable selector-no-qualifying-type, declaration-empty-line-before,  order/properties-order */
 
 :host {
-  display: inline-flex;
+  display: inline-flex !important; // prevent some conditions in hyperlink overriding this
+  align-items: center;
+  vertical-align: middle;
 
   .hyperlink {
+    display: inline-flex !important; // prevent some conditions in hyperlink overriding this
+    align-items: center;
+
     &:focus,
     &:hover {
       text-decoration: underline;
@@ -33,8 +38,6 @@
 
     width: var(--ds-size-300, vac.$ds-size-300);
     height: var(--ds-size-300, vac.$ds-size-300);
-
-    top: -1px;
 
     margin-right: 5px;
     margin-left: var(--ds-size-100, vac.$ds-size-100);
