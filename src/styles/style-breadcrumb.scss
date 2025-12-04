@@ -88,6 +88,6 @@
 // Hides all breadcrumbs besides the second to last one
 :host(:not(:nth-last-of-type(2))) {
   @include bp.auro_breakpoint($max: vac.$ds-grid-breakpoint-sm) {
-    display: none;
+    display: none !important; // need to override inline-flex from :host
   }
 }
