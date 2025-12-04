@@ -101,8 +101,12 @@
 
 ### Breadcrumb
 
-Example when the `auro-nav` slot is populated with `auro-nav-breadcrumb` elements. The last `auro-nav-breadcrumb` in an `auro-nav` component should represent
+Example when the `auro-nav` slot is populated with `auro-breadcrumb` elements. The last `auro-breadcrumb` in an `auro-nav` component should represent
 the current page the user is on. It should reflect a disabled hyperlink and the `href` attribute should **NOT** be populated.
+
+#### Mobile Behavior
+
+On mobile viewports (576px and under), `auro-nav` will collapse to show only the previous page `auro-breadcrumb` with a back arrow.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/breadcrumb.html) -->
