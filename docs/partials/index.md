@@ -16,14 +16,14 @@ Example using `auro-breadcrumb` for each link. This example renders as a horizon
 will display a home icon, all links will have a right chevron as a divider, and the last link will be disabled.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/breadcrumb.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/breadcrumbRelativePaths.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/breadcrumb.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/breadcrumbRelativePaths.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
