@@ -21,28 +21,28 @@ Example using `auro-breadcrumb` for each link. This example renders as a horizon
 will display a home icon, all links will have a right chevron as a divider, and the last link will be disabled.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/breadcrumb.html) -->
-  <!-- The below content is automatically added from ./../apiExamples/breadcrumb.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/breadcrumbRelativePaths.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/breadcrumbRelativePaths.html -->
   <auro-nav>
-    <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Home</auro-breadcrumb>
-    <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 2</auro-breadcrumb>
-    <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 3</auro-breadcrumb>
-    <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 4</auro-breadcrumb>
+    <auro-breadcrumb href="/components/auro/nav">Home</auro-breadcrumb>
+    <auro-breadcrumb href="/components/auro/nav">Level 2</auro-breadcrumb>
+    <auro-breadcrumb href="/components/auro/nav">Level 3</auro-breadcrumb>
+    <auro-breadcrumb href="/components/auro/nav">Level 4</auro-breadcrumb>
     <auro-breadcrumb>Current</auro-breadcrumb>
   </auro-nav>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/breadcrumb.html) -->
-<!-- The below code snippet is automatically added from ./../apiExamples/breadcrumb.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/breadcrumbRelativePaths.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/breadcrumbRelativePaths.html -->
 
 ```html
 <auro-nav>
-  <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Home</auro-breadcrumb>
-  <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 2</auro-breadcrumb>
-  <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 3</auro-breadcrumb>
-  <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 4</auro-breadcrumb>
+  <auro-breadcrumb href="/components/auro/nav">Home</auro-breadcrumb>
+  <auro-breadcrumb href="/components/auro/nav">Level 2</auro-breadcrumb>
+  <auro-breadcrumb href="/components/auro/nav">Level 3</auro-breadcrumb>
+  <auro-breadcrumb href="/components/auro/nav">Level 4</auro-breadcrumb>
   <auro-breadcrumb>Current</auro-breadcrumb>
 </auro-nav>
 ```
