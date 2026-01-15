@@ -1,4 +1,4 @@
-// Copyright (c) 2022 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
+// Copyright (c) 2026 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
 
 // ---------------------------------------------------------------------
@@ -11,23 +11,32 @@ import tokensCss from "./styles/tokens.scss";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * The auro-nav element provides users a way to ... (it would be great if you fill this out).
- *
+ * The `auro-anchorlink` element is used to create anchor navigation links within a page, typically used inside an `auro-nav` component.
+ * @customElement auro-anchorlink
+ * 
+ * Force a list of inherited auro-hyperlink properties to be hidden from the generated documentation.
+ * @forcePrivate {'appearance', 'download', 'layout', 'ondark', 'onDark', 'referrerpolicy', 'rel', 'role', 'safeUri', 'size', 'shape', 'target', 'type', 'variant'}
  */
-
-// build the component class
 export class AuroAnchorlink extends AuroHyperlink {
   static get properties() {
     return {
       ...super.properties,
 
       /**
-       * If set, the link is currently the active link in the parent auro-nav.
+       * If set, the link is currently the active link in the parent `auro-nav`.
        */
       active: {
         type: Boolean,
         reflect: true,
       },
+
+      /**
+       * If true, the anchorlink will have a fluid-width UI.
+       * @default true
+       */
+      fluid: {
+        type: Boolean
+      }
     };
   }
 
@@ -38,7 +47,7 @@ export class AuroAnchorlink extends AuroHyperlink {
 
   /**
    * This will register this element with the browser.
-   * @param {string} [name="auro-anchorlink"] - The name of element that you want to register to.
+   * @param {string} [name="auro-anchorlink"] - The name of the element that you want to register.
    *
    * @example
    * AuroAnchorlink.register("custom-anchorlink") // this will register this element to <custom-anchorlink/>
