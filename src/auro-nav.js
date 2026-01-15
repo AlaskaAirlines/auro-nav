@@ -1,4 +1,4 @@
-// Copyright (c) 2022 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
+// Copyright (c) 2026 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
 
 // ---------------------------------------------------------------------
@@ -20,9 +20,9 @@ import colorCss from "./styles/color.scss";
 import styleCss from "./styles/style.scss";
 import tokensCss from "./styles/tokens.scss";
 
-// See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * The auro-nav element provides a way to show users a secondary navigation aid that helps them understand the relation between the location of their current page and higher level pages.
+ * The `auro-nav` element provides a way to show users a secondary navigation aid that helps them understand the relation between the location of their current page and higher level pages.
+ * @customElement auro-nav
  *
  * @slot Slot for insertion of navigation links.
  * @slot mobileToggleExpanded - Slot for button text in mobile when content is expanded.
@@ -34,6 +34,10 @@ export class AuroNav extends LitElement {
   constructor() {
     super();
 
+    this._initializeDefaults();
+  }
+
+  _initializeDefaults() {
     this.anchorNavContent = undefined;
 
     const versioning = new AuroDependencyVersioning();
@@ -88,11 +92,11 @@ export class AuroNav extends LitElement {
       anchorNavContent: { type: String },
 
       /**
-       * If true, the home icon will not be displayed before first auro-breadcrumb.
+       * If true, the home icon will not be displayed before first `auro-breadcrumb`.
        */
       noHomeIcon: {
         type: Boolean,
-        reflect: true,
+        reflect: true
       },
     };
   }
@@ -103,7 +107,7 @@ export class AuroNav extends LitElement {
 
   /**
    * This will register this element with the browser.
-   * @param {string} [name="auro-nav"] - The name of element that you want to register to.
+   * @param {string} [name="auro-nav"] - The name of the element that you want to register.
    *
    * @example
    * AuroNav.register("custom-nav") // this will register this element to <custom-nav/>
