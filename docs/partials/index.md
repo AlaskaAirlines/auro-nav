@@ -1,29 +1,36 @@
+<!--
+ THIS PAGE'S CONTENT SHOULD BE KEPT MINIMAL.
+ ONLY ADD EXAMPLES THAT ARE TRULY NECESSARY FOR THE INDEX PAGE — THE BASIC EXAMPLE IS USUALLY ENOUGH.
+ ALL OTHER EXAMPLES SHOULD GO IN THE API DOCUMENTATION.
+-->
+
 # Nav
-
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/partials/description.md) -->
+ 
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/description.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
-
-## About auro-nav
-
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/partials/useCases.md) -->
+ 
+## Use Cases
+ 
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/useCases.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
-
+ 
 ## Example(s)
 
 ### Breadcrumb
 
-Example using `auro-breadcrumb` for each link. This example renders as a horizontal list of links. The first icon in the list
-will display a home icon, all links will have a right chevron as a divider, and the last link will be disabled.
+Example using `auro-breadcrumb` for each link. This example renders as a horizontal list of links. The first icon in the list will display a home icon, all links will have a right chevron as a divider, and the last link will be disabled.
+
+**Mobile Behavior**: On mobile viewports (576px and under), `auro-nav` will collapse to show only the previous page `auro-breadcrumb` with a back arrow.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/breadcrumbRelativePaths.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/breadcrumb.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/breadcrumbRelativePaths.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/breadcrumb.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -41,32 +48,6 @@ This example shows a user how set up an `auro-nav` component using `auro-anchorl
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/anchornav.html) -->
-<!-- AURO-GENERATED-CONTENT:END -->
-
-</auro-accordion>
-
-## Recommended Use and Version Control
-
-There are two important parts of every Auro component. The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">class</a> and the custom element. The class is exported and then used as part of defining the Web Component. When importing this component as described in the <a href="#install">install</a> section, the class is imported and the `auro-nav` custom element is defined automatically.
-
-To protect from versioning conflicts with other instances of the component being loaded, it is recommended to use our `AuroNav.register(name)` method and pass in a unique name.
-
-```js
-import { AuroNav, AuroBreadcrumb } from '@aurodesignsystem/auro-nav/class';
-
-AuroNav.register('custom-nav');
-AuroBreadcrumb.register('custom-breadcrumb');
-```
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/custom.html) -->
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/custom.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>

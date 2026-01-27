@@ -1,4 +1,4 @@
-// Copyright (c) 2022 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
+// Copyright (c) 2026 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
 
 // ---------------------------------------------------------------------
@@ -9,7 +9,13 @@ import colorBreadcrumbCss from "./styles/color-breadcrumb.scss";
 import styleBreadcrumbCss from "./styles/style-breadcrumb.scss";
 import tokensCss from "./styles/tokens.scss";
 
-// build the component class
+/**
+ * The `auro-breadcrumb` element is a horizontal navigation component that indicates the current page's location within a navigational hierarchy, typically used within an `auro-nav` component.
+ * @customElement auro-breadcrumb
+ * 
+ * Force a list of inherited auro-hyperlink properties to be hidden from the generated documentation.
+ * @forcePrivate {'active', 'appearance', 'download', 'fluid', 'layout', 'ondark', 'onDark', 'referrerpolicy', 'rel', 'role', 'safeUri', 'size', 'shape', 'target', 'type', 'variant'}
+ */
 export class AuroBreadcrumb extends AuroHyperlink {
   static get styles() {
     const styles = AuroHyperlink.styles;
@@ -18,7 +24,7 @@ export class AuroBreadcrumb extends AuroHyperlink {
 
   /**
    * This will register this element with the browser.
-   * @param {string} [name="auro-breadcrumb"] - The name of element that you want to register to.
+   * @param {string} [name="auro-breadcrumb"] - The name of the element that you want to register.
    *
    * @example
    * AuroBreadcrumb.register("custom-breadcrumb") // this will register this element to <custom-breadcrumb/>
